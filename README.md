@@ -173,12 +173,12 @@ The central commanding super-panel granting complete visibility and control over
 
 | Executive Analytics Dashboard | Child Master Dossier & History |
 |:---:|:---:|
-| <img src="Screenshots/02_Admin_Panel/01_Admin_Dashboard.png" alt="Admin Dashboard" width="460" /> | <img src="Screenshots/02_Admin_Panel/05_Child_Details_View_Modal.png" alt="Child Dossier Modal" width="460" /> |
+| <img src="Screenshots/02_Admin_Panel/01_Admin_Dashboard.png" alt="Admin Dashboard" width="460" /> | <img src="Screenshots/02_Admin_Panel/05_Child_Details_View.png" alt="Child Dossier Modal" width="460" /> |
 | *Macro metrics: Children, Centers, Doses & Bookings* | *Deep medical record inspection with instant certificate download* |
 
 | Hospital Network Registry | Interactive Map Pin Placement |
 |:---:|:---:|
-| <img src="Screenshots/02_Admin_Panel/14_List_Of_Hospitals.png" alt="Hospitals List" width="460" /> | <img src="Screenshots/02_Admin_Panel/16_Edit_Hospital_Form_Map.png" alt="Edit Hospital Map Pinning" width="460" /> |
+| <img src="Screenshots/02_Admin_Panel/14_List_Of_Hospitals.png" alt="Hospitals List" width="460" /> | <img src="Screenshots/02_Admin_Panel/16_Edit_Hospital_Form.png" alt="Edit Hospital Map Pinning" width="460" /> |
 | *Full facility CRUD, licensing & active status controls* | *Drag & drop GPS pin placement with auto-coordinates* |
 
 <details>
@@ -211,12 +211,12 @@ Empowers clinic medical personnel, staff nurses, and vaccinators to manage incom
 
 | Hospital Operational Dashboard | Vaccine Inventory & Batch Logistics |
 |:---:|:---:|
-| <img src="Screenshots/03_Hospital_Panel/01_Hospital_Dashboard.png" alt="Hospital Dashboard" width="460" /> | <img src="Screenshots/03_Hospital_Panel/07_All_Vaccines_List_Inventory.png" alt="Hospital Inventory" width="460" /> |
+| <img src="Screenshots/03_Hospital_Panel/01_Hospital_Dashboard.png" alt="Hospital Dashboard" width="460" /> | <img src="Screenshots/03_Hospital_Panel/07_All_Vaccines_List.png" alt="Hospital Inventory" width="460" /> |
 | *Today's active queue, stock status & quick actions* | *Track batches, expiry dates, vial stocks & safety thresholds* |
 
 | Daily Appointments Queue | Clinical Dose Administration Modal |
 |:---:|:---:|
-| <img src="Screenshots/03_Hospital_Panel/04_Hospital_Appointments_List.png" alt="Appointments List" width="460" /> | <img src="Screenshots/03_Hospital_Panel/05_Vaccine_Status_Update_Modal.png" alt="Vaccine Status Modal" width="460" /> |
+| <img src="Screenshots/03_Hospital_Panel/04_Hospital_Appointments.png" alt="Appointments List" width="460" /> | <img src="Screenshots/03_Hospital_Panel/05_Vaccine_Status_Inventory.png" alt="Vaccine Status Modal" width="460" /> |
 | *Real-time queue with filterable status indicators* | *Record dose completion with automatic inventory deduction* |
 
 <details>
@@ -225,11 +225,11 @@ Empowers clinic medical personnel, staff nurses, and vaccinators to manage incom
 
 | Add Vaccine Stock Form | Hospital Vaccinators Roster |
 |:---:|:---:|
-| <img src="Screenshots/03_Hospital_Panel/06_Add_Vaccine_Stock_Form.png" alt="Add Vaccine Stock" width="460" /> | <img src="Screenshots/03_Hospital_Panel/08_Hospital_Vaccinators_List.png" alt="Hospital Vaccinators" width="460" /> |
+| <img src="Screenshots/03_Hospital_Panel/06_Add_Vaccine_Stock_Form.png" alt="Add Vaccine Stock" width="460" /> | <img src="Screenshots/03_Hospital_Panel/08_Hospital_Vaccinators.png" alt="Hospital Vaccinators" width="460" /> |
 
 | Institutional Facility Profile | Edit Facility Information |
 |:---:|:---:|
-| <img src="Screenshots/03_Hospital_Panel/02_Hospital_Profile.png" alt="Hospital Profile" width="460" /> | <img src="Screenshots/03_Hospital_Panel/03_Hospital_Edit_Profile_Modal.png" alt="Edit Hospital Profile" width="460" /> |
+| <img src="Screenshots/03_Hospital_Panel/02_Hospital_Profile.png" alt="Hospital Profile" width="460" /> | <img src="Screenshots/03_Hospital_Panel/03_Hospital_Edit_Profile.png" alt="Edit Hospital Profile" width="460" /> |
 
 </details>
 
@@ -241,7 +241,7 @@ Provides guardians with an intuitive self-service portal to track their children
 
 | Parent Central Health Dashboard | WHO / EPI Smart Schedule Timeline |
 |:---:|:---:|
-| <img src="Screenshots/04_Parent_Panel/01_Parent_Dashboard.png" alt="Parent Dashboard" width="460" /> | <img src="Screenshots/04_Parent_Panel/06_Vaccination_Schedule_WHO_EPI.png" alt="WHO Schedule Timeline" width="460" /> |
+| <img src="Screenshots/04_Parent_Panel/01_Parent_Dashboard.png" alt="Parent Dashboard" width="460" /> | <img src="Screenshots/04_Parent_Panel/06_Vaccination_Schedule_Timeline.png" alt="WHO Schedule Timeline" width="460" /> |
 | *Child health cards, upcoming milestones & alerts* | *Automatic age-based milestone calculator (Birth to 15 Months)* |
 
 | Map-Based Center Appointment Booking | Complete Immunization History Report |
@@ -271,7 +271,7 @@ Every administered vaccination record culminates in an official, tamper-evident 
 
 | Official Digital Vaccination Certificate | Real-Time Public QR Verification Portal |
 |:---:|:---:|
-| <img src="Screenshots/05_Certificates/01_Official_Digital_Vaccination_Certificate.png" alt="Official Digital Vaccination Certificate" width="460" /> | <img src="Screenshots/01_Public_Portal/16_Digital_Certificate_Verification.png" alt="Digital Certificate Verification" width="460" /> |
+| <img src="Screenshots/05_Certificates/01_Official_Digital_Certificate_Web.png" alt="Official Digital Vaccination Certificate" width="460" /> | <img src="Screenshots/01_Public_Portal/16_Digital_Certificate_Verification.png" alt="Digital Certificate Verification" width="460" /> |
 | *Vector layout with dynamic cryptographic QR code, official watermark & security seal* | *Public zero-auth verification gateway proving genuine issuance and authenticity* |
 
 ---
