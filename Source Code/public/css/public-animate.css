@@ -1,0 +1,77 @@
+/* VacciCare public scroll / entrance animations */
+
+html, body {
+    overflow-x: hidden;
+}
+
+.vc-reveal {
+    opacity: 0;
+    will-change: opacity, transform, filter;
+    transition:
+        opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.7s ease;
+    transition-delay: var(--vc-delay, 0ms);
+}
+
+.vc-reveal--up {
+    transform: translateY(36px);
+}
+
+.vc-reveal--left {
+    transform: translateX(-40px);
+}
+
+.vc-reveal--right {
+    transform: translateX(40px);
+}
+
+.vc-reveal--zoom {
+    transform: scale(0.92);
+    filter: blur(2px);
+}
+
+.vc-reveal--pop {
+    transform: translateY(18px) scale(0.94);
+}
+
+.vc-reveal.vc-reveal-in {
+    opacity: 1;
+    transform: none;
+    filter: none;
+}
+
+h1.vc-reveal--up,
+h2.vc-reveal--up {
+    transform: translateY(28px);
+}
+
+.vc-reveal-in.department-wrap:hover,
+.vc-reveal-in.staff:hover,
+.vc-reveal-in.how-it-works-card:hover,
+.vc-reveal-in.testimony-wrap:hover,
+.vc-reveal-in.media.block-6:hover {
+    transform: translateY(-6px);
+}
+
+.vc-reveal-in.btn:hover,
+.vc-reveal-in.btn-primary:hover,
+.vc-reveal-in.btn-secondary:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .vc-reveal--left,
+    .vc-reveal--right {
+        transform: translateY(24px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vc-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        transition: none !important;
+    }
+}

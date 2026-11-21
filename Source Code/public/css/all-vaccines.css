@@ -1,0 +1,781 @@
+/* =====================================================
+   VACCI CARE
+   ALL VACCINES PAGE
+===================================================== */
+
+:root {
+
+    --av-primary: #207dff;
+    --av-primary-dark: #1060cc;
+    --av-primary-light: #eaf3ff;
+
+    --av-text: #294b68;
+    --av-muted: #7890a5;
+
+    --av-white: #ffffff;
+    --av-background: #f5f9fc;
+
+    --av-border: #e7eef4;
+
+    --av-green: #27ae72;
+    --av-green-bg: #eafaf3;
+
+    --av-red: #d9534f;
+    --av-red-bg: #fff3f3;
+
+    --av-shadow: 0 8px 25px rgba(32, 125, 255, 0.07);
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.all-vaccines-page {
+
+    padding: 32px;
+
+    min-height: calc(100vh - 78px);
+
+    background: var(--av-background);
+}
+
+
+.all-vaccines-container {
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+
+.vaccines-page-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border: 1px solid var(--av-border);
+
+    border-radius: 18px;
+
+    padding: 28px 32px;
+
+    margin-bottom: 22px;
+
+    box-shadow: var(--av-shadow);
+}
+
+
+.heading-eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    background: var(--av-primary-light);
+
+    border: 1px solid #d8eaff;
+
+    color: var(--av-primary);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .8px;
+}
+
+
+.heading-content h1 {
+
+    margin: 10px 0 5px;
+
+    color: #163f67;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+
+.heading-content p {
+
+    margin: 0;
+
+    color: var(--av-muted);
+
+    font-size: 13px;
+}
+
+
+.heading-icon {
+
+    width: 66px;
+
+    height: 66px;
+
+    border-radius: 17px;
+
+    background: var(--av-primary-light);
+
+    border: 1px solid #d7eaff;
+
+    color: var(--av-primary);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.vaccine-stat-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+
+.vaccine-stat-card {
+
+    background: #ffffff;
+
+    border: 1px solid var(--av-border);
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: var(--av-shadow);
+}
+
+
+.stat-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+
+.stat-icon.blue {
+
+    color: var(--av-primary);
+
+    background: var(--av-primary-light);
+}
+
+
+.stat-icon.green {
+
+    color: var(--av-green);
+
+    background: var(--av-green-bg);
+}
+
+
+.stat-icon.red {
+
+    color: var(--av-red);
+
+    background: var(--av-red-bg);
+}
+
+
+.stat-content span {
+
+    display: block;
+
+    color: var(--av-muted);
+
+    font-size: 11px;
+
+    margin-bottom: 4px;
+}
+
+
+.stat-content strong {
+
+    color: #163f67;
+
+    font-size: 23px;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   MAIN CARD
+===================================================== */
+
+.all-vaccines-card {
+
+    background: #ffffff;
+
+    border: 1px solid var(--av-border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--av-shadow);
+}
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.all-vaccines-card-header {
+
+    padding: 24px 26px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--av-border);
+}
+
+
+.list-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--av-primary);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .8px;
+}
+
+
+.all-vaccines-card-header h2 {
+
+    margin: 5px 0 3px;
+
+    color: #163f67;
+
+    font-size: 19px;
+}
+
+
+.all-vaccines-card-header p {
+
+    margin: 0;
+
+    color: var(--av-muted);
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   ADD BUTTON
+===================================================== */
+
+.add-vaccine-small-btn {
+
+    min-height: 42px;
+
+    padding: 0 15px;
+
+    border-radius: 9px;
+
+    background: var(--av-primary);
+
+    color: #ffffff;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: .2s ease;
+}
+
+
+.add-vaccine-small-btn:hover {
+
+    background: var(--av-primary-dark);
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.all-vaccine-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+
+.all-vaccine-table thead {
+
+    background: #f7fbfe;
+}
+
+
+.all-vaccine-table th {
+
+    padding: 14px 18px;
+
+    text-align: left;
+
+    color: #67839a;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+
+    border-bottom: 1px solid var(--av-border);
+}
+
+
+.all-vaccine-table td {
+
+    padding: 16px 18px;
+
+    border-bottom: 1px solid #edf2f6;
+
+    color: #4d6a81;
+
+    font-size: 12px;
+
+    vertical-align: middle;
+}
+
+
+.all-vaccine-table tbody tr {
+
+    transition: .2s ease;
+}
+
+
+.all-vaccine-table tbody tr:hover {
+
+    background: #fbfdff;
+}
+
+
+.all-vaccine-table tbody tr:last-child td {
+
+    border-bottom: 0;
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.row-number {
+
+    color: #8aa0b1;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   VACCINE NAME
+===================================================== */
+
+.vaccine-name-cell {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.table-vaccine-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--av-primary-light);
+
+    color: var(--av-primary);
+
+    font-size: 16px;
+}
+
+
+.vaccine-name-cell strong {
+
+    display: block;
+
+    color: #294b68;
+
+    font-size: 12px;
+}
+
+
+.vaccine-name-cell small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #9aabba;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.description-text {
+
+    display: block;
+
+    max-width: 280px;
+
+    color: #7890a5;
+
+    line-height: 1.5;
+}
+
+
+.no-description {
+
+    color: #a4b3bf;
+
+    font-style: italic;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   AVAILABILITY
+===================================================== */
+
+.availability-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 10px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.availability-badge.available {
+
+    color: #21815a;
+
+    background: var(--av-green-bg);
+}
+
+
+.availability-badge.unavailable {
+
+    color: #c44d49;
+
+    background: var(--av-red-bg);
+}
+
+
+.status-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.date-text {
+
+    color: #7890a5;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-vaccines {
+
+    padding: 65px 25px;
+
+    text-align: center;
+}
+
+
+.empty-vaccine-icon {
+
+    width: 68px;
+
+    height: 68px;
+
+    margin: 0 auto 16px;
+
+    border-radius: 18px;
+
+    background: var(--av-primary-light);
+
+    color: var(--av-primary);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+}
+
+
+.empty-vaccines h3 {
+
+    margin: 0 0 7px;
+
+    color: #294b68;
+
+    font-size: 17px;
+}
+
+
+.empty-vaccines p {
+
+    max-width: 420px;
+
+    margin: 0 auto 20px;
+
+    color: var(--av-muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.empty-add-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    min-height: 42px;
+
+    padding: 0 16px;
+
+    border-radius: 9px;
+
+    background: var(--av-primary);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: .2s ease;
+}
+
+
+.empty-add-btn:hover {
+
+    background: var(--av-primary-dark);
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .all-vaccines-page {
+
+        padding: 20px 15px;
+    }
+
+
+    .vaccine-stat-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .vaccines-page-heading {
+
+        padding: 22px;
+    }
+
+
+    .heading-content h1 {
+
+        font-size: 23px;
+    }
+
+
+    .heading-icon {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 23px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .vaccines-page-heading {
+
+        padding: 18px;
+    }
+
+
+    .heading-icon {
+
+        display: none;
+    }
+
+
+    .all-vaccines-card-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+
+    .add-vaccine-small-btn {
+
+        width: 100%;
+    }
+
+
+    .vaccine-stat-card {
+
+        padding: 17px;
+    }
+
+}

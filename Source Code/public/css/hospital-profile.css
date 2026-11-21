@@ -1,0 +1,763 @@
+/* ==========================================
+   VACCI CARE - HOSPITAL PROFILE
+========================================== */
+
+.hospital-profile-page {
+    width: 100%;
+    min-height: calc(100vh - 90px);
+
+    background: #f4f9fd;
+
+    padding: 36px 42px 60px;
+
+    color: #0d408c;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.hospital-profile-container {
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   TOP HEADER
+========================================== */
+
+.profile-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.profile-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #078bd3;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.1px;
+}
+
+.profile-top h1 {
+    margin: 7px 0 5px;
+
+    color: #073d6b;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.profile-top p {
+    margin: 0;
+
+    color: #7190a8;
+
+    font-size: 13px;
+}
+
+.profile-top-icon {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf3ff;
+
+    border: 1px solid #cce9f8;
+
+    border-radius: 15px;
+
+    color: #078ed7;
+
+    font-size: 26px;
+}
+
+
+/* ==========================================
+   MAIN CARD
+========================================== */
+
+.hospital-profile-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #d4e6f3;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(28, 112, 160, 0.06);
+}
+
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.profile-card-head {
+    min-height: 95px;
+
+    padding: 20px 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e1edf5;
+}
+
+.hospital-profile-title {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.hospital-profile-icon {
+    width: 49px;
+    height: 49px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf3ff;
+
+    border: 1px solid #cce9f8;
+
+    border-radius: 12px;
+
+    color: #078ed7;
+
+    font-size: 21px;
+}
+
+.hospital-profile-title h2 {
+    margin: 0 0 4px;
+
+    color: #073d6b;
+
+    font-size: 17px;
+}
+
+.hospital-profile-title p {
+    margin: 0;
+
+    color: #7894aa;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   VERIFIED
+========================================== */
+
+.verified-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 14px;
+
+    background: #f1fff8;
+
+    border: 1px solid #b9ecd6;
+
+    border-radius: 30px;
+
+    color: #12a36a;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   BODY
+========================================== */
+
+.profile-card-body {
+    padding: 28px;
+}
+
+
+/* ==========================================
+   SECTION TITLE
+========================================== */
+
+.profile-section-title {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+.section-number {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf3ff;
+
+    border: 1px solid #cce9f8;
+
+    border-radius: 9px;
+
+    color: #078ed7;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.profile-section-title h3 {
+    margin: 2px 0 4px;
+
+    color: #073d6b;
+
+    font-size: 16px;
+}
+
+.profile-section-title p {
+    margin: 0;
+
+    color: #7894aa;
+
+    font-size: 11px;
+}
+
+
+/* ==========================================
+   FIELDS GRID
+========================================== */
+
+.profile-fields {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px 20px;
+}
+
+
+/* ==========================================
+   FIELD
+========================================== */
+
+.profile-field {
+    min-width: 0;
+}
+
+.full-field {
+    grid-column: 1 / -1;
+}
+
+.profile-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #17496e;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* ==========================================
+   VALUE BOX
+========================================== */
+
+.profile-value {
+    min-height: 47px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 11px 14px;
+
+    background: #fbfdff;
+
+    border: 1px solid #cfe2ef;
+
+    border-radius: 10px;
+
+    color: #16466d;
+
+    font-size: 12px;
+}
+
+.profile-value i {
+    flex-shrink: 0;
+
+    color: #78a9c8;
+
+    font-size: 15px;
+}
+
+
+/* ==========================================
+   SECOND SECTION
+========================================== */
+
+.second-section {
+    margin-top: 32px;
+
+    padding-top: 28px;
+
+    border-top: 1px solid #e2edf5;
+}
+
+
+/* ==========================================
+   ACCOUNT STATUS
+========================================== */
+
+.account-status-box {
+    margin-top: 30px;
+
+    padding: 17px 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    background: #f3fbff;
+
+    border: 1px solid #d0eaf7;
+
+    border-radius: 12px;
+}
+
+.account-status-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e4f6ff;
+
+    border-radius: 10px;
+
+    color: #078ed7;
+
+    font-size: 18px;
+}
+
+.account-status-text {
+    flex: 1;
+}
+
+.account-status-text h3 {
+    margin: 0 0 3px;
+
+    color: #073d6b;
+
+    font-size: 13px;
+}
+
+.account-status-text p {
+    margin: 0;
+
+    color: #7592a9;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.active-badge {
+    padding: 6px 13px;
+
+    background: #edfff7;
+
+    border: 1px solid #bdebd8;
+
+    border-radius: 20px;
+
+    color: #10a269;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.profile-card-footer {
+    min-height: 74px;
+
+    padding: 14px 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #fbfdff;
+
+    border-top: 1px solid #e2edf5;
+}
+
+.profile-footer-info {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #7894aa;
+
+    font-size: 11px;
+}
+
+.profile-footer-info i {
+    color: #078ed7;
+}
+
+
+/* ==========================================
+   EDIT BUTTON
+========================================== */
+
+.edit-profile-btn {
+    height: 40px;
+
+    padding: 0 18px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #168fd0;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.edit-profile-btn:hover {
+    background: #087fbe;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .hospital-profile-page {
+        padding: 28px 22px 50px;
+    }
+
+    .profile-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .full-field {
+        grid-column: auto;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hospital-profile-page {
+        padding: 22px 15px 40px;
+    }
+
+    .profile-top h1 {
+        font-size: 25px;
+    }
+
+    .profile-top-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 21px;
+    }
+
+    .profile-card-head {
+        padding: 18px;
+    }
+
+    .profile-card-body {
+        padding: 20px;
+    }
+
+    .profile-card-footer {
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 18px;
+    }
+
+    .edit-profile-btn {
+        width: 100%;
+    }
+
+    .verified-badge {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   HOSPITAL EDIT PROFILE - FORCE INPUT STYLING
+   ========================================================= */
+
+/* INPUTS */
+.hospital-profile-page input[type="text"],
+.hospital-profile-page input[type="email"],
+.hospital-profile-page input[type="tel"],
+.hospital-profile-page input[type="password"],
+.hospital-profile-page select,
+.hospital-profile-page textarea,
+
+.profile-fields input[type="text"],
+.profile-fields input[type="email"],
+.profile-fields input[type="tel"],
+.profile-fields input[type="password"],
+.profile-fields select,
+.profile-fields textarea {
+    width: 100% !important;
+    height: 46px !important;
+
+    min-width: 0 !important;
+
+    padding: 0 10px !important;
+    margin: 0 !important;
+
+    border: none !important;
+    outline: none !important;
+
+    background: transparent !important;
+
+    box-shadow: none !important;
+
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+
+    color: #17324d !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* SELECT */
+.hospital-profile-page select,
+.profile-fields select {
+    cursor: pointer;
+}
+
+
+/* TEXTAREA */
+.hospital-profile-page textarea,
+.profile-fields textarea {
+    height: 100px !important;
+    padding-top: 12px !important;
+    resize: vertical;
+}
+
+
+/* =========================================================
+   THE BOX AROUND EACH INPUT
+   ========================================================= */
+
+.hospital-profile-page .profile-value,
+.profile-fields .profile-value {
+    width: 100% !important;
+    min-height: 48px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    padding: 0 12px !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #cfe0ee !important;
+    border-radius: 12px !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+}
+
+
+/* ICON */
+.hospital-profile-page .profile-value > i,
+.profile-fields .profile-value > i {
+    flex: 0 0 22px !important;
+
+    width: 22px !important;
+
+    margin-right: 8px !important;
+
+    text-align: center !important;
+
+    color: #5d9dcc !important;
+
+    font-size: 15px !important;
+}
+
+
+/* HOVER */
+.hospital-profile-page .profile-value:hover,
+.profile-fields .profile-value:hover {
+    border-color: #9fc9e8 !important;
+}
+
+
+/* FOCUS */
+.hospital-profile-page .profile-value:focus-within,
+.profile-fields .profile-value:focus-within {
+    border-color: #2696df !important;
+
+    box-shadow: 0 0 0 3px rgba(38, 150, 223, 0.08) !important;
+}
+
+
+/* PLACEHOLDER */
+.hospital-profile-page input::placeholder,
+.profile-fields input::placeholder {
+    color: #9aa9b8 !important;
+}

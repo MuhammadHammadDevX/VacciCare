@@ -1,0 +1,20 @@
+{
+  "name": "VacciCare - Vaccination Management System",
+  "short_name": "VacciCare",
+  "description": "Smart Child Immunization & Digital Health Records Management System",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0284c7",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/images/pwa/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["medical", "health", "productivity"]
+}

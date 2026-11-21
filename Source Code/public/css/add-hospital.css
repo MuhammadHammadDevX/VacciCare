@@ -1,0 +1,1486 @@
+/* =========================================================
+   VACCI CARE
+   ADMIN - ADD HOSPITAL
+   FONT SIZE FIXED
+========================================================= */
+
+.add-hospital-page,
+.add-hospital-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.add-hospital-page {
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 30px 38px 55px;
+
+    background: #eaf3ff;
+    color: #23445d;
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.add-hospital-header {
+
+    max-width: 1320px;
+    margin: 0 auto 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.page-eyebrow {
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+    margin-bottom: 8px;
+
+    color: #207dff;
+
+    font-size: 12px !important;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+
+.header-content h1 {
+
+    margin: 0;
+
+    color: #183e5c;
+
+    font-size: 30px !important;
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+
+.header-content p {
+
+    margin: 8px 0 0;
+
+    color: #8296a5;
+
+    font-size: 14px !important;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HEADER BADGE
+========================================================= */
+
+.header-badge {
+
+    min-width: 190px;
+
+    padding: 12px 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    background: #fff;
+
+    border: 1px solid #dfeaf2;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 7px 22px rgba(28,100,145,.05);
+}
+
+
+.header-badge > i {
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #207dff;
+
+    background: #eaf3ff;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+
+.header-badge strong {
+
+    display: block;
+
+    color: #36556a;
+
+    font-size: 13px !important;
+    font-weight: 700;
+}
+
+
+.header-badge span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #91a1ad;
+
+    font-size: 12px !important;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.hospital-form-card {
+
+    max-width: 1320px;
+
+    margin: 0 auto 25px;
+
+    background: #fff;
+
+    border: 1px solid #e0ebf2;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 35px rgba(30,100,145,.06);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   FORM CARD HEADER
+========================================================= */
+
+.form-card-header {
+
+    padding: 22px 27px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    border-bottom: 1px solid #edf2f6;
+}
+
+
+.form-title-icon {
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #207dff;
+
+    background: #eaf3ff;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+}
+
+
+.section-eyebrow {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #207dff;
+
+    font-size: 11px !important;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.form-card-header h2,
+.registered-header h2 {
+
+    margin: 0;
+
+    color: #1d415d;
+
+    font-size: 21px !important;
+    line-height: 1.3;
+
+    font-weight: 750;
+}
+
+
+.form-card-header p,
+.registered-header p {
+
+    margin: 6px 0 0;
+
+    color: #8799a7;
+
+    font-size: 13px !important;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.hospital-form {
+
+    padding: 25px 27px 0;
+}
+
+
+.form-section-title {
+
+    margin: 4px 0 17px;
+
+    padding-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #31546b;
+
+    border-bottom: 1px solid #edf2f6;
+
+    font-size: 14px !important;
+    font-weight: 800;
+}
+
+
+.form-section-title i {
+
+    color: #207dff;
+
+    font-size: 14px;
+}
+
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px 20px;
+
+    margin-bottom: 26px;
+}
+
+
+.form-group.full {
+
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #506b7d;
+
+    font-size: 13px !important;
+    font-weight: 700;
+}
+
+
+.form-group label span {
+
+    color: #e05260;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.input-wrapper,
+.textarea-wrapper {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background: #fbfdff;
+
+    border: 1px solid #dce7ef;
+
+    border-radius: 9px;
+
+    transition: .18s ease;
+}
+
+
+.input-wrapper {
+
+    height: 44px;
+}
+
+
+.input-wrapper:focus-within,
+.textarea-wrapper:focus-within {
+
+    background: #fff;
+
+    border-color: #66b4e9;
+
+    box-shadow:
+        0 0 0 3px rgba(24,133,220,.08);
+}
+
+
+.input-wrapper > i,
+.textarea-wrapper > i {
+
+    margin-left: 13px;
+
+    flex-shrink: 0;
+
+    color: #7c9caf;
+
+    font-size: 13px;
+}
+
+
+.input-wrapper input,
+.input-wrapper select {
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 0;
+
+    padding: 0 13px;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #3d596c;
+
+    font-family: inherit;
+
+    font-size: 14px !important;
+}
+
+
+.input-wrapper input::placeholder,
+.textarea-wrapper textarea::placeholder {
+
+    color: #a5b2bc;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.textarea-wrapper {
+
+    align-items: flex-start;
+}
+
+
+.textarea-wrapper > i {
+
+    margin-top: 14px;
+}
+
+
+.textarea-wrapper textarea {
+
+    width: 100%;
+
+    min-height: 110px;
+
+    padding: 12px 13px;
+
+    resize: vertical;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #3d596c;
+
+    font-family: inherit;
+
+    font-size: 14px !important;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM FOOTER
+========================================================= */
+
+.form-footer {
+
+    min-height: 70px;
+
+    margin: 0 -27px;
+
+    padding: 13px 27px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    background: #eaf3ff;
+
+    border-top: 1px solid #eaf1f5;
+}
+
+
+.required-note {
+
+    color: #8a9ba7;
+
+    font-size: 13px !important;
+}
+
+
+.required-note span {
+
+    color: #e05260;
+}
+
+
+.form-buttons {
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.cancel-btn,
+.save-hospital-btn {
+
+    height: 40px;
+
+    padding: 0 16px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 13px !important;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .18s ease;
+}
+
+
+.cancel-btn {
+
+    color: #61798a;
+
+    background: #fff;
+
+    border: 1px solid #dce6ec;
+}
+
+
+.cancel-btn:hover {
+
+    background: #f3f7fa;
+}
+
+
+.save-hospital-btn {
+
+    color: #fff;
+
+    background: #207dff;
+
+    border: 1px solid #207dff;
+
+    box-shadow:
+        0 5px 14px rgba(24,133,220,.17);
+}
+
+
+.save-hospital-btn:hover {
+
+    background: #1060cc;
+
+    border-color: #1060cc;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   REGISTERED HOSPITALS
+========================================================= */
+
+.registered-hospitals-card {
+
+    max-width: 1320px;
+
+    margin: 0 auto;
+
+    background: #fff;
+
+    border: 1px solid #e0ebf2;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px rgba(30,100,145,.055);
+}
+
+
+/* =========================================================
+   REGISTERED HEADER
+========================================================= */
+
+.registered-header {
+
+    padding: 21px 27px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #edf2f6;
+}
+
+
+.hospital-total {
+
+    padding: 8px 12px;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    color: #207dff;
+
+    background: #eaf3ff;
+
+    border: 1px solid #dceefb;
+
+    border-radius: 8px;
+
+    font-size: 13px !important;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.hospital-search-box {
+
+    height: 44px;
+
+    margin: 16px 27px;
+
+    display: flex;
+    align-items: center;
+
+    background: #fbfdff;
+
+    border: 1px solid #dce7ef;
+
+    border-radius: 9px;
+}
+
+
+.hospital-search-box:focus-within {
+
+    background: #fff;
+
+    border-color: #66b4e9;
+
+    box-shadow:
+        0 0 0 3px rgba(24,133,220,.08);
+}
+
+
+.hospital-search-box i {
+
+    margin-left: 13px;
+
+    color: #7894a6;
+
+    font-size: 13px;
+}
+
+
+.hospital-search-box input {
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0 13px;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: #405d72;
+
+    font-family: inherit;
+
+    font-size: 14px !important;
+}
+
+
+.hospital-search-box input::placeholder {
+
+    color: #a5b2bc;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   HOSPITAL LIST
+========================================================= */
+
+.registered-hospital-list {
+
+    border-top: 1px solid #edf2f6;
+}
+
+
+.registered-hospital {
+
+    min-height: 82px;
+
+    padding: 14px 27px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.6fr
+        1.3fr
+        .65fr
+        1fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-bottom: 1px solid #edf2f6;
+
+    transition: .18s ease;
+}
+
+
+.registered-hospital:hover {
+
+    background: #fbfdff;
+}
+
+
+.registered-hospital-main {
+
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+
+.registered-icon {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #207dff;
+
+    background: #eaf3ff;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+}
+
+
+.registered-info {
+
+    min-width: 0;
+}
+
+
+.registered-info strong {
+
+    display: block;
+
+    overflow: hidden;
+
+    color: #315167;
+
+    font-size: 14px !important;
+    font-weight: 700;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.registered-info span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #8295a3;
+
+    font-size: 12px !important;
+}
+
+
+.registered-info span b {
+
+    margin: 0 3px;
+
+    color: #b2c0c9;
+}
+
+
+.registered-info small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #a0adb7;
+
+    font-size: 11px !important;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.registered-contact {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.registered-contact span {
+
+    overflow: hidden;
+
+    color: #708899;
+
+    font-size: 12px !important;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.registered-contact i {
+
+    margin-right: 5px;
+
+    color: #207dff;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.registered-status {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: max-content;
+
+    padding: 7px 10px;
+
+    gap: 6px;
+
+    color: #16855a;
+
+    background: #eaf9f2;
+
+    border-radius: 20px;
+
+    font-size: 12px !important;
+    font-weight: 800;
+}
+
+
+.active-dot {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #1ca86a;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.registered-actions {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 7px;
+}
+
+
+.hospital-edit-btn,
+.hospital-delete-btn {
+
+    height: 34px;
+
+    padding: 0 11px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    border-radius: 7px;
+
+    font-family: inherit;
+
+    font-size: 12px !important;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .18s ease;
+}
+
+
+.hospital-edit-btn {
+
+    color: #207dff;
+
+    background: #eaf3ff;
+
+    border: 1px solid #d5ebfa;
+}
+
+
+.hospital-edit-btn:hover {
+
+    color: #fff;
+
+    background: #207dff;
+
+    border-color: #207dff;
+}
+
+
+.hospital-delete-btn {
+
+    color: #d05260;
+
+    background: #fff0f1;
+
+    border: 1px solid #f3d6da;
+}
+
+
+.hospital-delete-btn:hover {
+
+    color: #fff;
+
+    background: #d85b67;
+
+    border-color: #d85b67;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.empty-hospitals {
+
+    display: none;
+
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+
+.empty-hospitals.show {
+
+    display: block;
+}
+
+
+.empty-hospitals i {
+
+    width: 50px;
+    height: 50px;
+
+    margin: 0 auto 11px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #5e92b5;
+
+    background: #edf6fc;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+}
+
+
+.empty-hospitals strong {
+
+    display: block;
+
+    color: #3c5a6e;
+
+    font-size: 16px !important;
+}
+
+
+.empty-hospitals span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #91a1ad;
+
+    font-size: 13px !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .registered-hospital {
+
+        grid-template-columns:
+            1.4fr
+            1fr
+            .7fr;
+    }
+
+
+    .registered-actions {
+
+        grid-column: 1 / -1;
+
+        justify-content: flex-start;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .add-hospital-page {
+
+        padding: 23px 18px 45px;
+    }
+
+
+    .add-hospital-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .header-badge {
+
+        width: 100%;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-group.full {
+
+        grid-column: auto;
+    }
+
+
+    .registered-hospital {
+
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 16px 20px;
+    }
+
+
+    .registered-actions {
+
+        grid-column: auto;
+
+        justify-content: flex-start;
+    }
+
+
+    .registered-actions button {
+
+        flex: 1;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .add-hospital-page {
+
+        padding: 20px 13px 35px;
+    }
+
+
+    .header-content h1 {
+
+        font-size: 26px !important;
+    }
+
+
+    .header-content p {
+
+        font-size: 13px !important;
+    }
+
+
+    .hospital-form {
+
+        padding: 20px 17px 0;
+    }
+
+
+    .form-card-header {
+
+        padding: 18px;
+    }
+
+
+    .form-footer {
+
+        margin: 0 -17px;
+
+        padding: 12px 17px;
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .form-buttons {
+
+        width: 100%;
+    }
+
+
+    .cancel-btn,
+    .save-hospital-btn {
+
+        flex: 1;
+    }
+
+
+    .registered-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 18px;
+    }
+
+
+    .hospital-search-box {
+
+        margin: 13px 18px;
+    }
+}
+
+
+/* =========================================================
+   FINAL FONT SIZE PROTECTION
+   =========================================================
+   Ye section purani/global CSS ko text chhota karne
+   se rokega.
+========================================================= */
+
+.add-hospital-page {
+    font-size: 14px !important;
+}
+
+
+.add-hospital-page .page-eyebrow {
+    font-size: 12px !important;
+}
+
+
+.add-hospital-page .header-content h1 {
+    font-size: 30px !important;
+}
+
+
+.add-hospital-page .header-content p {
+    font-size: 14px !important;
+}
+
+
+.add-hospital-page .header-badge strong {
+    font-size: 13px !important;
+}
+
+
+.add-hospital-page .header-badge span {
+    font-size: 12px !important;
+}
+
+
+.add-hospital-page .section-eyebrow {
+    font-size: 11px !important;
+}
+
+
+.add-hospital-page .form-card-header h2,
+.add-hospital-page .registered-header h2 {
+    font-size: 21px !important;
+}
+
+
+.add-hospital-page .form-card-header p,
+.add-hospital-page .registered-header p {
+    font-size: 13px !important;
+}
+
+
+.add-hospital-page .form-section-title {
+    font-size: 14px !important;
+}
+
+
+.add-hospital-page .form-group label {
+    font-size: 13px !important;
+}
+
+
+.add-hospital-page input,
+.add-hospital-page select,
+.add-hospital-page textarea {
+    font-size: 14px !important;
+}
+
+
+.add-hospital-page .required-note {
+    font-size: 13px !important;
+}
+
+
+.add-hospital-page .cancel-btn,
+.add-hospital-page .save-hospital-btn {
+    font-size: 13px !important;
+}
+
+
+.add-hospital-page .hospital-total {
+    font-size: 13px !important;
+}
+
+
+.add-hospital-page .hospital-search-box input {
+    font-size: 14px !important;
+}
+
+
+.add-hospital-page .registered-info strong {
+    font-size: 14px !important;
+}
+
+
+.add-hospital-page .registered-info span {
+    font-size: 12px !important;
+}
+
+
+.add-hospital-page .registered-info small {
+    font-size: 11px !important;
+}
+
+
+.add-hospital-page .registered-contact span {
+    font-size: 12px !important;
+}
+
+
+.add-hospital-page .registered-status {
+    font-size: 12px !important;
+}
+
+
+.add-hospital-page .hospital-edit-btn,
+.add-hospital-page .hospital-delete-btn {
+    font-size: 12px !important;
+}
+
+
+.add-hospital-page .empty-hospitals strong {
+    font-size: 16px !important;
+}
+
+
+.add-hospital-page .empty-hospitals span {
+    font-size: 13px !important;
+}
+/* =========================================================
+   FORM ACTIONS & BUTTONS (MODERN HEALTHCARE POLISH)
+========================================================= */
+
+.form-actions {
+    margin: 32px -27px 0 -27px;
+    padding: 22px 27px;
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-radius: 0 0 18px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    flex-wrap: wrap;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.submit-button {
+    height: 48px;
+    padding: 0 28px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+    color: #ffffff !important;
+    font-family: inherit;
+    font-size: 14px !important;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.28);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    text-decoration: none;
+}
+
+.submit-button i {
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.38);
+    filter: brightness(1.08);
+}
+
+.submit-button:hover i {
+    transform: scale(1.15);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.22);
+}
+
+.cancel-button {
+    height: 48px;
+    padding: 0 22px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #475569 !important;
+    font-family: inherit;
+    font-size: 13.5px !important;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+}
+
+.cancel-button i {
+    font-size: 15px;
+    color: #64748b;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.cancel-button:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+    color: #0f172a !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.cancel-button:hover i {
+    color: #0f172a;
+    transform: translateX(-2px);
+}
+
+.cancel-button:active {
+    transform: translateY(0);
+}
+
+.form-action-note {
+    margin-left: auto;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.form-action-note i {
+    color: #10b981;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 24px -16px 0 -16px;
+        padding: 16px;
+    }
+
+    .submit-button,
+    .cancel-button {
+        width: 100%;
+    }
+
+    .form-action-note {
+        margin-left: 0;
+        justify-content: center;
+    }
+}

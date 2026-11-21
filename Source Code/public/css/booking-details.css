@@ -1,0 +1,975 @@
+/* =========================================================
+   VACCI CARE
+   ADMIN - BOOKING DETAILS
+   FONT SIZE FIXED
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.admin-booking-page,
+.admin-booking-page * {
+    box-sizing: border-box;
+}
+
+.admin-booking-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 30px 38px 55px;
+
+    background: #eaf3ff;
+
+    color: #23445d;
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.booking-page-header {
+    max-width: 1350px;
+
+    margin: 0 auto 24px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.page-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: #207dff;
+
+    font-size: 12px !important;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.booking-page-header h1 {
+    margin: 0;
+
+    color: #183e5c;
+
+    font-size: 30px !important;
+    line-height: 1.25;
+
+    font-weight: 800;
+}
+
+
+.booking-page-header p {
+    margin: 8px 0 0;
+
+    color: #8296a5;
+
+    font-size: 14px !important;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.booking-card {
+    width: 100%;
+    max-width: 1350px;
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e0ebf2;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 35px rgba(30, 100, 145, .055);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.booking-card-header {
+    min-height: 88px;
+
+    padding: 22px 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #edf2f6;
+}
+
+
+.section-eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #207dff;
+
+    font-size: 11px !important;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.booking-card-header h2 {
+    margin: 0;
+
+    color: #1d415d;
+
+    font-size: 21px !important;
+
+    line-height: 1.3;
+
+    font-weight: 750;
+}
+
+
+.booking-count {
+    padding: 9px 13px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #207dff;
+
+    background: #eaf3ff;
+
+    border: 1px solid #dceefb;
+
+    border-radius: 8px;
+
+    font-size: 13px !important;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.booking-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.booking-table {
+    width: 100%;
+
+    min-width: 1100px;
+
+    border-collapse: collapse;
+
+    border-spacing: 0;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.booking-table thead {
+    background: #f8fbfd;
+}
+
+
+.booking-table th {
+    padding: 15px 16px;
+
+    color: #607b8d;
+
+    background: #f8fbfd;
+
+    border-bottom: 1px solid #e4edf2;
+
+    text-align: left;
+
+    font-size: 12px !important;
+
+    line-height: 1.4;
+
+    font-weight: 800;
+
+    letter-spacing: .3px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.booking-table td {
+    padding: 16px;
+
+    color: #627b8b;
+
+    border-bottom: 1px solid #edf2f6;
+
+    font-size: 13px !important;
+
+    line-height: 1.5;
+
+    vertical-align: middle;
+}
+
+
+.booking-table tbody tr {
+    transition: background .15s ease;
+}
+
+
+.booking-table tbody tr:hover {
+    background: #fbfdff;
+}
+
+
+.booking-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+
+/* =========================================================
+   BOOKING ID
+========================================================= */
+
+.booking-id {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 48px;
+
+    padding: 6px 9px;
+
+    color: #207dff;
+
+    background: #eaf3ff;
+
+    border: 1px solid #d8eafb;
+
+    border-radius: 7px;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 12px !important;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PERSON CELL
+========================================================= */
+
+.person-cell {
+    min-width: 170px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.person-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #207dff;
+
+    background: #eaf3ff;
+
+    border-radius: 9px;
+
+    font-size: 15px !important;
+}
+
+
+.person-cell strong {
+    display: block;
+
+    color: #315167;
+
+    font-size: 14px !important;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PARENT
+========================================================= */
+
+.parent-name {
+    color: #627b8b;
+
+    font-size: 13px !important;
+
+    line-height: 1.5;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   VACCINE
+========================================================= */
+
+.vaccine-name {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #506d7e;
+
+    font-size: 13px !important;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.vaccine-name i {
+    color: #18a56b;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   HOSPITAL
+========================================================= */
+
+.hospital-name {
+    max-width: 210px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #617c8c;
+
+    font-size: 13px !important;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.hospital-name i {
+    flex-shrink: 0;
+
+    color: #207dff;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.booking-date {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #5f7888;
+
+    font-size: 13px !important;
+
+    white-space: nowrap;
+}
+
+
+.booking-date i {
+    color: #7963cf;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   TIME
+========================================================= */
+
+.booking-time {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #5f7888;
+
+    font-size: 13px !important;
+
+    white-space: nowrap;
+}
+
+
+.booking-time i {
+    color: #e19a38;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.booking-status {
+    min-height: 30px;
+
+    padding: 6px 11px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 20px;
+
+    font-size: 12px !important;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+.booking-status > span {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+}
+
+
+/* Confirmed */
+
+.booking-status.confirmed {
+    color: #15885a;
+
+    background: #eaf9f2;
+
+    border: 1px solid #d5f0e3;
+}
+
+
+.booking-status.confirmed > span {
+    background: #20a66b;
+}
+
+
+/* Pending */
+
+.booking-status.pending {
+    color: #bd7a18;
+
+    background: #fff7e8;
+
+    border: 1px solid #f8e9c8;
+}
+
+
+.booking-status.pending > span {
+    background: #e5a33c;
+}
+
+
+/* =========================================================
+   EMPTY TABLE MESSAGE
+========================================================= */
+
+.booking-table td[colspan] {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    color: #8296a5;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   TABLE ICONS
+========================================================= */
+
+.booking-table i {
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   GENERAL LINKS INSIDE TABLE
+========================================================= */
+
+.booking-table a {
+    font-size: 13px !important;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE - 1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .admin-booking-page {
+        padding: 28px 25px 50px;
+    }
+
+    .booking-page-header {
+        max-width: 100%;
+    }
+
+    .booking-card {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .admin-booking-page {
+        padding: 25px 22px 45px;
+    }
+
+
+    .booking-page-header h1 {
+        font-size: 28px !important;
+    }
+
+
+    .booking-page-header p {
+        font-size: 13px !important;
+    }
+
+
+    .booking-card-header {
+        padding: 20px 22px;
+    }
+
+
+    .booking-card-header h2 {
+        font-size: 20px !important;
+    }
+
+
+    .booking-table th {
+        font-size: 12px !important;
+    }
+
+
+    .booking-table td {
+        font-size: 13px !important;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .admin-booking-page {
+        padding: 22px 16px 40px;
+    }
+
+
+    .booking-page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        margin-bottom: 20px;
+    }
+
+
+    .booking-page-header h1 {
+        font-size: 26px !important;
+    }
+
+
+    .booking-page-header p {
+        font-size: 13px !important;
+    }
+
+
+    .booking-card-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 18px;
+    }
+
+
+    .booking-card-header h2 {
+        font-size: 19px !important;
+    }
+
+
+    .booking-count {
+        font-size: 12px !important;
+    }
+
+
+    .booking-table {
+        min-width: 1000px;
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .admin-booking-page {
+        padding: 18px 12px 35px;
+    }
+
+
+    .page-eyebrow {
+        font-size: 11px !important;
+    }
+
+
+    .booking-page-header h1 {
+        font-size: 24px !important;
+    }
+
+
+    .booking-page-header p {
+        font-size: 12px !important;
+    }
+
+
+    .booking-card {
+        border-radius: 14px;
+    }
+
+
+    .booking-card-header {
+        padding: 16px;
+    }
+
+
+    .booking-card-header h2 {
+        font-size: 18px !important;
+    }
+
+}
+
+
+/* =========================================================
+   ADMIN PANEL - GLOBAL FONT OVERRIDE
+   ========================================================= */
+
+/*
+   Ye section sidebar aur top header ke
+   bohat chhote text ko bhi readable rakhta hai.
+*/
+
+.admin-sidebar,
+.admin-sidebar *,
+.admin-topbar,
+.admin-topbar *,
+.admin-header,
+.admin-header * {
+    font-size: 14px;
+}
+
+
+/* Sidebar links */
+
+.admin-sidebar a,
+.admin-sidebar .nav-link,
+.admin-sidebar .menu-link,
+.admin-nav-link {
+    font-size: 14px !important;
+}
+
+
+/* Sidebar icons */
+
+.admin-sidebar i,
+.admin-nav-link i {
+    font-size: 16px !important;
+}
+
+
+/* Sidebar section title */
+
+.admin-sidebar .sidebar-label {
+    font-size: 11px !important;
+}
+
+
+/* Admin brand */
+
+.admin-brand strong {
+    font-size: 22px !important;
+}
+
+
+.admin-brand small {
+    font-size: 10px !important;
+}
+
+
+/* Top header */
+
+.admin-topbar h1,
+.admin-header h1 {
+    font-size: 24px !important;
+}
+
+
+.admin-topbar p,
+.admin-header p {
+    font-size: 13px !important;
+}
+
+
+/* User name */
+
+.admin-topbar .user-name,
+.admin-header .user-name {
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   IMPORTANT - PREVENT OLD 7px / 8px / 9px RULES
+========================================================= */
+
+.admin-booking-page .booking-table th {
+    font-size: 12px !important;
+}
+
+
+.admin-booking-page .booking-table td {
+    font-size: 13px !important;
+}
+
+
+.admin-booking-page .booking-table .booking-id {
+    font-size: 12px !important;
+}
+
+
+.admin-booking-page .booking-table .person-cell strong {
+    font-size: 14px !important;
+}
+
+
+.admin-booking-page .booking-table .parent-name {
+    font-size: 13px !important;
+}
+
+
+.admin-booking-page .booking-table .vaccine-name {
+    font-size: 13px !important;
+}
+
+
+.admin-booking-page .booking-table .hospital-name {
+    font-size: 13px !important;
+}
+
+
+.admin-booking-page .booking-table .booking-date {
+    font-size: 13px !important;
+}
+
+
+.admin-booking-page .booking-table .booking-time {
+    font-size: 13px !important;
+}
+
+
+.admin-booking-page .booking-table .booking-status {
+    font-size: 12px !important;
+}
+
+
+/* =========================================================
+   END
+========================================================= */
+
+
+
+/* =========================================================
+   EXPORT CSV BUTTON
+========================================================= */
+
+.export-csv-btn {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 700;
+    font-size: 13px !important;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.25);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.export-csv-btn:hover {
+    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+}
+
+
+/* =========================================================
+   SEARCH INPUT
+========================================================= */
+
+.booking-search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.booking-search-wrapper i {
+    position: absolute;
+    left: 12px;
+    color: #9bb0c0;
+    font-size: 14px !important;
+    pointer-events: none;
+}
+
+.booking-search-wrapper input {
+    width: 230px;
+    padding: 10px 14px 10px 34px;
+    border: 1px solid #dce8f1;
+    border-radius: 10px;
+    background: #f8fbfd;
+    color: #315167;
+    font-size: 13px !important;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.booking-search-wrapper input:focus {
+    border-color: #207dff;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(32, 125, 255, 0.1);
+}
+
+.booking-search-wrapper input::placeholder {
+    color: #a7bfcf;
+    font-size: 12px !important;
+}

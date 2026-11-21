@@ -1,0 +1,913 @@
+
+/* =========================================================
+   VACCI CARE - HOSPITAL REQUEST / REQUEST STATUS
+   Parent Dashboard
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #eaf3ff;
+    color: #123b63;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.request-main {
+    margin-left: 254px;
+    width: calc(100% - 254px);
+    min-height: 100vh;
+    background: #eaf3ff;
+    padding: 0 35px 50px;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.request-page-header {
+    width: 100%;
+    padding: 40px 0 28px;
+}
+
+.page-header-content {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.page-header-text {
+    min-width: 0;
+}
+
+.page-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 8px;
+
+    color: #1688d8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.page-eyebrow i {
+    font-size: 14px;
+}
+
+.page-header-text h1 {
+    margin: 0 0 8px;
+
+    color: #0b3155;
+    font-size: 31px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.page-header-text p {
+    margin: 0;
+
+    max-width: 680px;
+
+    color: #6b87a0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.page-header-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #e9f6ff;
+    border: 1px solid #d2eafa;
+
+    color: #1688d8;
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   REQUEST STATISTICS
+   ========================================================= */
+
+.request-stats-section {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.request-stats {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.request-stat-card {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe9f5;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(38, 104, 150, 0.06);
+}
+
+.request-stat-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    font-size: 19px;
+}
+
+.request-stat-icon.total {
+    background: #eaf5ff;
+    color: #1688d8;
+}
+
+.request-stat-icon.pending {
+    background: #fff7e6;
+    color: #e5a11b;
+}
+
+.request-stat-icon.approved {
+    background: #eafaf1;
+    color: #22a565;
+}
+
+.request-stat-icon.rejected {
+    background: #fff0f0;
+    color: #e05252;
+}
+
+.request-stat-card span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #7891a7;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.request-stat-card strong {
+    display: block;
+
+    color: #0b3155;
+    font-size: 23px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   REQUEST HISTORY SECTION
+   ========================================================= */
+
+.request-history-section {
+    width: 100%;
+}
+
+.request-card {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe9f5;
+    border-radius: 20px;
+
+    box-shadow: 0 10px 35px rgba(38, 104, 150, 0.07);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.request-card-header {
+    min-height: 92px;
+
+    padding: 20px 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #e3edf5;
+
+    background: #fbfdff;
+}
+
+.request-card-title {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.title-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #e9f6ff;
+    color: #1688d8;
+
+    font-size: 20px;
+}
+
+.request-card-title h2 {
+    margin: 0 0 4px;
+
+    color: #0b3155;
+
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.request-card-title p {
+    margin: 0;
+
+    color: #7891a7;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.request-count-badge {
+    flex-shrink: 0;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #edf8ff;
+    border: 1px solid #d3eaf8;
+
+    color: #1688d8;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   REQUEST TABLE
+   ========================================================= */
+
+.request-table {
+    width: 100%;
+    min-width: 950px;
+
+    margin: 0;
+
+    border-collapse: collapse;
+
+    color: #244a69;
+}
+
+.request-table thead {
+    background: #f5faff;
+}
+
+.request-table thead th {
+    padding: 15px 17px;
+
+    border-top: 0;
+    border-bottom: 1px solid #e2edf5;
+
+    color: #6c879d;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+.request-table tbody td {
+    padding: 17px;
+
+    vertical-align: middle;
+
+    border-top: 1px solid #edf2f6;
+
+    color: #244a69;
+
+    font-size: 12px;
+}
+
+.request-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.request-table tbody tr:hover {
+    background: #f9fcff;
+}
+
+
+/* =========================================================
+   REQUEST ID
+   ========================================================= */
+
+.request-id-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.request-id {
+    color: #1688d8;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.request-id-cell small {
+    color: #8aa0b2;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   CHILD CELL
+   ========================================================= */
+
+.child-cell {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 125px;
+}
+
+.child-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #edf8ff;
+    color: #1688d8;
+
+    font-size: 14px;
+}
+
+.child-cell strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #214c70;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.child-cell small {
+    display: block;
+
+    color: #91a5b5;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   HOSPITAL CELL
+   ========================================================= */
+
+.hospital-cell {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 130px;
+}
+
+.hospital-cell i {
+    color: #1688d8;
+    font-size: 15px;
+}
+
+.hospital-cell span {
+    color: #315775;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   VACCINE CELL
+   ========================================================= */
+
+.vaccine-cell {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 110px;
+}
+
+.vaccine-cell i {
+    color: #22a565;
+    font-size: 15px;
+}
+
+.vaccine-cell span {
+    color: #315775;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   DATE CELL
+   ========================================================= */
+
+.date-cell {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    white-space: nowrap;
+
+    color: #45667f;
+
+    font-size: 12px;
+}
+
+.date-cell i {
+    color: #1688d8;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TIME CELL
+   ========================================================= */
+
+.time-cell {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    white-space: nowrap;
+
+    color: #45667f;
+
+    font-size: 12px;
+}
+
+.time-cell i {
+    color: #8b6bd6;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.request-status {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.request-status.pending {
+    background: #fff8e8;
+    color: #d69a16;
+}
+
+.request-status.approved {
+    background: #eafaf1;
+    color: #209b5c;
+}
+
+.request-status.rejected {
+    background: #fff0f0;
+    color: #d84e4e;
+}
+
+.request-status i {
+    font-size: 12px;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.request-empty-state {
+    width: 100%;
+
+    padding: 55px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.request-empty-state .empty-icon {
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #edf8ff;
+
+    color: #1688d8;
+
+    font-size: 27px;
+}
+
+.request-empty-state h3 {
+    margin: 0 0 7px;
+
+    color: #0b3155;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.request-empty-state p {
+    max-width: 430px;
+
+    margin: 0 0 18px;
+
+    color: #8197aa;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.request-empty-state .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 9px 17px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: #1688d8;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: none;
+}
+
+.request-empty-state .btn:hover {
+    background: #0879c7;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   INFORMATION CARD
+   ========================================================= */
+
+.request-info-section {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.request-info-card {
+    width: 100%;
+    max-width: 1180px;
+    min-height: 90px;
+
+    margin: 0 auto;
+
+    padding: 20px 24px;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #dceaf4;
+    border-radius: 16px;
+
+    box-shadow: 0 7px 25px rgba(38, 104, 150, 0.05);
+}
+
+.request-info-icon {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eaf3ff;
+    color: #1688d8;
+
+    font-size: 18px;
+}
+
+.request-info-card h3 {
+    margin: 1px 0 5px;
+
+    color: #153e62;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.request-info-card p {
+    margin: 0;
+
+    color: #8095a7;
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.request-info-card strong {
+    color: #426782;
+}
+
+
+/* =========================================================
+   REMOVE BOOTSTRAP TABLE EXTRA SPACING
+   ========================================================= */
+
+.request-table th,
+.request-table td {
+    border-left: 0;
+    border-right: 0;
+}
+
+.request-table tbody tr:first-child td {
+    border-top: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+    .request-main {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .request-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .page-header-text h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE / SIDEBAR COLLAPSED
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .request-main {
+        margin-left: 0;
+        width: 100%;
+
+        padding: 0 18px 35px;
+    }
+
+    .request-page-header {
+        padding-top: 30px;
+    }
+
+    .page-header-content {
+        align-items: flex-start;
+    }
+
+    .request-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .request-count-badge {
+        align-self: flex-start;
+    }
+
+    .request-info-card {
+        padding: 18px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .request-main {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .request-page-header {
+        padding: 25px 0 22px;
+    }
+
+    .page-header-content {
+        gap: 15px;
+    }
+
+    .page-eyebrow {
+        font-size: 10px;
+    }
+
+    .page-header-text h1 {
+        font-size: 24px;
+    }
+
+    .page-header-text p {
+        font-size: 12px;
+    }
+
+    .page-header-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+
+        border-radius: 14px;
+
+        font-size: 19px;
+    }
+
+    .request-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .request-stat-card {
+        padding: 16px;
+    }
+
+    .request-card {
+        border-radius: 15px;
+    }
+
+    .request-card-header {
+        padding: 18px;
+    }
+
+    .request-card-title h2 {
+        font-size: 17px;
+    }
+
+    .request-card-title p {
+        font-size: 11px;
+    }
+
+    .request-info-card {
+        flex-direction: column;
+    }
+
+    .request-info-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    .request-info-card p {
+        font-size: 11px;
+    }
+
+    .request-empty-state {
+        padding: 40px 15px;
+    }
+}

@@ -1,0 +1,685 @@
+/* =========================================================
+   VACCI CARE
+   HOSPITAL - UPDATE VACCINE STATUS
+========================================================= */
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f9fd;
+    color: #0d408c;
+}
+
+
+/* =========================
+   MAIN PAGE
+
+   IMPORTANT:
+   NO margin-left here.
+   hospital-header.php already
+   controls the sidebar layout.
+========================= */
+
+.vaccine-page {
+    width: 100%;
+    min-height: calc(100vh - 90px);
+
+    background: #f4f9fd;
+
+    padding: 38px 42px 60px;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.vaccine-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 27px;
+}
+
+.title-content {
+    min-width: 0;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: #078bd3;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.eyebrow i {
+    font-size: 13px;
+}
+
+.page-title h1 {
+    margin: 0 0 6px;
+
+    color: #073d6b;
+
+    font-size: 30px;
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+.page-title p {
+    margin: 0;
+
+    color: #6d8aa3;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   TITLE ICON
+========================= */
+
+.title-icon {
+    width: 64px;
+    height: 64px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf3ff;
+
+    border: 1px solid #cbe9fa;
+
+    border-radius: 16px;
+
+    color: #078fd8;
+
+    font-size: 27px;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.vaccine-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #d4e6f3;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 28px rgba(31, 112, 160, 0.06);
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.card-top {
+    min-height: 100px;
+
+    padding: 23px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #e1edf5;
+}
+
+.record-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.record-icon {
+    width: 49px;
+    height: 49px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf3ff;
+
+    border: 1px solid #cce9fa;
+
+    border-radius: 12px;
+
+    color: #078ed7;
+
+    font-size: 21px;
+}
+
+.record-heading h2 {
+    margin: 0 0 4px;
+
+    color: #073d6b;
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.record-heading p {
+    margin: 0;
+
+    color: #7894aa;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   SECURE BADGE
+========================= */
+
+.secure-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 14px;
+
+    border: 1px solid #b9edd8;
+
+    border-radius: 30px;
+
+    background: #f3fff9;
+
+    color: #12a36a;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.secure-badge i {
+    font-size: 13px;
+}
+
+
+/* =========================
+   FORM SECTION
+========================= */
+
+.form-section {
+    display: grid;
+
+    grid-template-columns: 45px minmax(0, 1fr);
+
+    gap: 18px;
+
+    padding: 28px;
+
+    border-bottom: 1px solid #e2edf5;
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+
+/* =========================
+   SECTION NUMBER
+========================= */
+
+.section-number {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eaf3ff;
+
+    border: 1px solid #c9e8fa;
+
+    border-radius: 10px;
+
+    color: #078ed7;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   SECTION BODY
+========================= */
+
+.section-body {
+    width: 100%;
+    min-width: 0;
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h3 {
+    margin: 0 0 5px;
+
+    color: #073d6b;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.section-title p {
+    margin: 0;
+
+    color: #7894aa;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FIELDS GRID
+========================= */
+
+.fields-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================
+   FIELD
+========================= */
+
+.field {
+    width: 100%;
+}
+
+.field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #16466d;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.field label span {
+    color: #e64e5d;
+}
+
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.input-box {
+    position: relative;
+
+    width: 100%;
+}
+
+.input-box > i {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #78a9c8;
+
+    font-size: 15px;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.input-box select,
+.input-box input {
+    width: 100%;
+    height: 47px;
+
+    padding: 0 15px 0 42px;
+
+    border: 1px solid #cfe2ef;
+
+    border-radius: 10px;
+
+    background: #fbfdff;
+
+    color: #16466d;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+.input-box select {
+    cursor: pointer;
+}
+
+.input-box select:focus,
+.input-box input:focus {
+    border-color: #1998dc;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 152, 220, 0.09);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.textarea-box {
+    position: relative;
+}
+
+.textarea-box > i {
+    position: absolute;
+
+    left: 15px;
+    top: 16px;
+
+    color: #78a9c8;
+
+    font-size: 15px;
+
+    z-index: 2;
+}
+
+.textarea-box textarea {
+    width: 100%;
+    min-height: 105px;
+
+    padding: 13px 15px 13px 42px;
+
+    border: 1px solid #cfe2ef;
+
+    border-radius: 10px;
+
+    background: #fbfdff;
+
+    color: #16466d;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    outline: none;
+
+    resize: vertical;
+
+    transition: all 0.2s ease;
+}
+
+.textarea-box textarea:focus {
+    border-color: #1998dc;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 152, 220, 0.09);
+}
+
+.textarea-box textarea::placeholder {
+    color: #9ab1c3;
+}
+
+
+/* =========================
+   FORM ACTIONS
+========================= */
+
+.form-actions {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    padding: 16px 28px;
+
+    background: #fbfdff;
+
+    border-top: 1px solid #e3edf5;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    height: 43px;
+
+    padding: 0 20px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.btn-secondary {
+    border: 1px solid #d1e2ed;
+
+    background: #ffffff;
+
+    color: #5e7d95;
+}
+
+.btn-secondary:hover {
+    background: #f3f8fb;
+}
+
+.btn-primary {
+    border: none;
+
+    background: #168fd0;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 14px rgba(22, 143, 208, 0.18);
+}
+
+.btn-primary:hover {
+    background: #087fbe;
+
+    transform: translateY(-1px);
+}
+
+.btn-primary i {
+    margin-left: 7px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .vaccine-page {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .fields-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vaccine-container {
+        max-width: 900px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .vaccine-page {
+        padding: 25px 18px 45px;
+    }
+
+    .page-title {
+        align-items: flex-start;
+    }
+
+    .page-title h1 {
+        font-size: 25px;
+    }
+
+    .title-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 22px;
+    }
+
+    .card-top {
+        padding: 20px;
+    }
+
+    .form-section {
+        grid-template-columns: 1fr;
+
+        padding: 22px 20px;
+
+        gap: 13px;
+    }
+
+    .section-number {
+        width: 32px;
+        height: 32px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+
+        padding: 18px 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .secure-badge {
+        display: none;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .vaccine-page {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .page-title {
+        gap: 10px;
+    }
+
+    .page-title h1 {
+        font-size: 22px;
+    }
+
+    .page-title p {
+        font-size: 11px;
+    }
+
+    .record-heading {
+        gap: 10px;
+    }
+
+    .record-icon {
+        width: 43px;
+        height: 43px;
+    }
+
+    .record-heading h2 {
+        font-size: 15px;
+    }
+}

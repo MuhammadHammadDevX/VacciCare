@@ -1,0 +1,662 @@
+/* =========================================================
+   VACCICARE HOSPITAL
+   HOSPITAL APPOINTMENTS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.appointment-page,
+.appointment-page * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN PAGE
+========================================================= */
+
+.appointment-page {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+
+    padding: 34px 32px 55px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef7ff 0%,
+            #e8f2fc 50%,
+            #f4f9fd 100%
+        );
+
+    font-family:
+        "Poppins",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: #23445d;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.appointment-container {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+========================================================= */
+
+.page-heading {
+    margin-bottom: 27px;
+}
+
+
+.page-heading h1 {
+    margin: 0;
+
+    color: #173d5d;
+
+    font-size: 30px;
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+.page-heading h1::before {
+    content: "APPOINTMENTS";
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #247dff;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.page-heading p {
+    margin: 8px 0 0;
+
+    color: #7b91a4;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BACKEND MESSAGE
+========================================================= */
+
+.backend-message {
+    width: 100%;
+
+    margin-bottom: 20px;
+
+    padding: 13px 17px;
+
+    border-radius: 12px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    border: 1px solid transparent;
+}
+
+
+.backend-message.success {
+    background: #eaf9f2;
+
+    color: #15885c;
+
+    border-color: #ccefe0;
+}
+
+
+.backend-message.error {
+    background: #fff0f1;
+
+    color: #c34a56;
+
+    border-color: #f4d0d4;
+}
+
+
+/* =========================================================
+   APPOINTMENT CARD
+========================================================= */
+
+.appointment-card {
+    position: relative;
+
+    width: 100%;
+
+    margin-bottom: 18px;
+
+    padding: 0;
+
+    background: #ffffff;
+
+    border: 1px solid #e1ebf3;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(38, 91, 137, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.appointment-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #d3e5f5;
+
+    box-shadow:
+        0 15px 35px rgba(38, 91, 137, 0.11);
+}
+
+
+/* =========================================================
+   APPOINTMENT GRID
+========================================================= */
+
+.appointment-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    column-gap: 35px;
+
+    row-gap: 0;
+
+    padding: 25px 25px 22px;
+}
+
+
+/* =========================================================
+   APPOINTMENT ITEM
+========================================================= */
+
+.appointment-item {
+    min-width: 0;
+
+    padding: 5px 0 19px;
+}
+
+
+.appointment-item span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #8499aa;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.2px;
+}
+
+
+.appointment-item strong {
+    display: block;
+
+    overflow: hidden;
+
+    color: #1b405f;
+
+    font-size: 13px;
+
+    font-weight: 750;
+
+    line-height: 1.35;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CHILD
+========================================================= */
+
+.appointment-item:first-child strong {
+    color: #1060cc;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   VACCINE
+========================================================= */
+
+.appointment-item:nth-child(3) strong {
+    color: #238463;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.appointment-item:nth-child(4) strong {
+    color: #435d73;
+}
+
+
+/* =========================================================
+   TIME
+========================================================= */
+
+.appointment-item:nth-child(5) strong {
+    color: #695bb2;
+}
+
+
+/* =========================================================
+   REQUEST STATUS
+========================================================= */
+
+.appointment-item:nth-child(6) strong {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 6px 11px;
+
+    background: #eaf9f2;
+
+    color: #15885c;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   VACCINATOR
+========================================================= */
+
+.appointment-item:nth-child(7) strong {
+    color: #506b80;
+}
+
+
+/* =========================================================
+   APPOINTMENT ACTIONS
+========================================================= */
+
+.appointment-actions {
+    display: flex;
+
+    align-items: center;
+
+    min-height: 62px;
+
+    padding: 16px 25px;
+
+    border-top: 1px solid #edf2f6;
+
+    background: #fcfdff;
+}
+
+
+/* =========================================================
+   CONFIRMED MESSAGE
+========================================================= */
+
+.confirmed {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #12865a;
+
+    font-size: 12px;
+
+    font-weight: 750;
+}
+
+
+.confirmed i {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   CONFIRM BUTTON
+========================================================= */
+
+.confirm-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 9px 15px;
+
+    background: #198754;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 14px rgba(25, 135, 84, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.confirm-btn:hover {
+    background: #157347;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 17px rgba(25, 135, 84, 0.25);
+}
+
+
+.confirm-btn:active {
+    transform: translateY(0);
+}
+
+
+.confirm-btn i {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.no-appointments {
+    width: 100%;
+
+    padding: 70px 25px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e1ebf3;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(38, 91, 137, 0.06);
+}
+
+
+.no-appointments i {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eaf3ff;
+
+    color: #247dff;
+
+    border-radius: 18px;
+
+    font-size: 27px !important;
+}
+
+
+.no-appointments h3 {
+    margin: 0 0 7px;
+
+    color: #244761;
+
+    font-size: 17px;
+
+    font-weight: 800;
+}
+
+
+.no-appointments p {
+    margin: 0;
+
+    color: #8a9cac;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   LARGE SCREEN
+========================================================= */
+
+@media (min-width: 1400px) {
+
+    .appointment-container {
+        max-width: 1250px;
+    }
+
+    .appointment-page {
+        padding-left: 38px;
+        padding-right: 38px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .appointment-page {
+        padding: 28px 24px 45px;
+    }
+
+
+    .appointment-container {
+        max-width: 100%;
+    }
+
+
+    .appointment-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        column-gap: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .appointment-page {
+        padding: 24px 20px 40px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 27px;
+    }
+
+
+    .appointment-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        column-gap: 25px;
+
+        padding: 22px 20px 18px;
+    }
+
+
+    .appointment-actions {
+        padding: 15px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .appointment-page {
+        padding: 20px 14px 35px;
+    }
+
+
+    .page-heading {
+        margin-bottom: 20px;
+    }
+
+
+    .page-heading h1 {
+        font-size: 23px;
+    }
+
+
+    .page-heading h1::before {
+        font-size: 8px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .page-heading p {
+        font-size: 10px;
+    }
+
+
+    .appointment-card {
+        border-radius: 16px;
+    }
+
+
+    .appointment-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+        padding: 18px 18px 5px;
+    }
+
+
+    .appointment-item {
+        padding: 9px 0 14px;
+
+        border-bottom: 1px solid #f0f3f6;
+    }
+
+
+    .appointment-item:last-child {
+        border-bottom: none;
+    }
+
+
+    .appointment-item span {
+        font-size: 9px;
+
+        margin-bottom: 5px;
+    }
+
+
+    .appointment-item strong {
+        font-size: 12px;
+    }
+
+
+    .appointment-actions {
+        min-height: auto;
+
+        padding: 14px 18px;
+    }
+
+
+    .confirmed {
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+
+
+    .confirm-btn {
+        width: 100%;
+
+        padding: 10px 14px;
+    }
+
+
+    .no-appointments {
+        padding: 55px 18px;
+    }
+
+}

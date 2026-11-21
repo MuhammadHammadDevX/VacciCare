@@ -1,0 +1,629 @@
+/* =========================================================
+   VacciCare — shared dashboard theme
+   Matches public site look (colors, logo, soft blue atmosphere)
+   Does NOT change sidebar + topbar layout pattern
+========================================================= */
+
+:root {
+    --vc-blue: #207dff;
+    --vc-blue-deep: #0d5fd4;
+    --vc-blue-soft: rgba(32, 125, 255, 0.12);
+    --vc-frame: #dce7f4;
+    --vc-radius: 18px;
+    --vc-shadow:
+        0 4px 6px rgba(25, 50, 85, 0.03),
+        0 14px 36px rgba(25, 60, 110, 0.08);
+    --vc-nav-shadow:
+        0 2px 4px rgba(25, 50, 85, 0.04),
+        0 12px 28px rgba(32, 125, 255, 0.12),
+        0 0 0 1px rgba(32, 125, 255, 0.08);
+
+    /* Map into existing dashboard tokens */
+    --primary: #207dff;
+    --primary-dark: #0d5fd4;
+    --primary-light: #eaf3ff;
+    --primary-blue: #207dff;
+}
+
+/* ---------- Page atmosphere (same family as public) ---------- */
+
+html {
+    background-color: var(--vc-frame);
+}
+
+body {
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(32, 125, 255, 0.18), transparent 55%),
+        radial-gradient(ellipse 70% 45% at 95% 10%, rgba(56, 189, 248, 0.12), transparent 50%),
+        radial-gradient(ellipse 60% 40% at 50% 100%, rgba(32, 125, 255, 0.08), transparent 55%),
+        linear-gradient(165deg, #e8f1fb 0%, #d9e6f5 45%, #e4edf7 100%) !important;
+    color: #1f3449;
+}
+
+/* ---------- Shared VacciCare logo (public-style) ---------- */
+
+.sidebar-logo,
+.admin-logo {
+    min-height: 88px !important;
+    height: auto !important;
+    padding: 18px 20px !important;
+    border-bottom: 1px solid rgba(32, 125, 255, 0.10) !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+.sidebar-logo-link,
+.admin-logo-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    text-decoration: none !important;
+}
+
+.sidebar-logo-icon,
+.admin-logo-icon {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 14px !important;
+    background: linear-gradient(135deg, #eaf3ff 0%, #d6e9ff 100%) !important;
+    border: 1px solid rgba(32, 125, 255, 0.18) !important;
+    color: var(--vc-blue) !important;
+    box-shadow: var(--vc-nav-shadow);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0;
+}
+
+.sidebar-logo-icon i,
+.admin-logo-icon i {
+    font-size: 20px !important;
+    color: var(--vc-blue) !important;
+    filter: drop-shadow(0 2px 4px rgba(32, 125, 255, 0.35));
+}
+
+.sidebar-logo-copy,
+.admin-logo-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    line-height: 1.15;
+}
+
+.sidebar-logo-text,
+.admin-logo-text {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
+    color: #1f3449 !important;
+}
+
+.sidebar-logo-text span,
+.admin-logo-text span {
+    color: var(--vc-blue) !important;
+}
+
+.sidebar-logo-tagline,
+.admin-logo-tagline {
+    margin: 3px 0 0 !important;
+    padding: 0 !important;
+    font-size: 9px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em;
+    color: #7890a5 !important;
+    opacity: 0.9;
+    white-space: nowrap;
+}
+
+/* ---------- Sidebars: white card feel like public ---------- */
+
+.dashboard-sidebar,
+.hospital-sidebar,
+.admin-sidebar {
+    background: #ffffff !important;
+    border-right: 1px solid rgba(32, 125, 255, 0.10) !important;
+    box-shadow:
+        4px 0 24px rgba(25, 60, 110, 0.06),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
+}
+
+.portal-badge,
+.admin-panel-label {
+    color: var(--vc-blue) !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.2px !important;
+    opacity: 0.85;
+}
+
+/* Nav links — soft public hover/active */
+.dashboard-nav-link,
+.hospital-nav-link,
+.admin-nav-link {
+    border-radius: 12px !important;
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease !important;
+}
+
+.dashboard-nav-link:hover,
+.hospital-nav-link:hover,
+.admin-nav-link:hover {
+    background: rgba(32, 125, 255, 0.08) !important;
+    color: var(--vc-blue) !important;
+}
+
+.dashboard-nav-link.active,
+.hospital-nav-link.active,
+.admin-nav-link.active {
+    background: linear-gradient(135deg, #207dff 0%, #0d5fd4 100%) !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 8px 20px rgba(32, 125, 255, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.dashboard-nav-link.active i,
+.hospital-nav-link.active i,
+.admin-nav-link.active i {
+    color: #ffffff !important;
+}
+
+/* ---------- Topbars ---------- */
+
+.dashboard-header,
+.hospital-header,
+.admin-header {
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(32, 125, 255, 0.08) !important;
+    box-shadow: 0 8px 24px rgba(25, 50, 85, 0.05) !important;
+}
+
+.header-profile,
+.admin-header-profile,
+.hospital-profile {
+    border-radius: 999px !important;
+    border: 1px solid rgba(32, 125, 255, 0.12) !important;
+    background: #ffffff !important;
+    box-shadow: var(--vc-nav-shadow) !important;
+}
+
+/* ---------- Content cards / common surfaces ---------- */
+
+.dashboard-stat-card,
+.quick-action-card,
+.empty-dashboard-card,
+.dashboard-section,
+.welcome-banner,
+.welcome-section,
+.stat-card,
+.admin-card,
+.summary-card,
+.chart-card,
+.content-card,
+.hospital-card,
+.profile-card,
+.form-card {
+    border-radius: var(--vc-radius) !important;
+    border: 1px solid rgba(32, 125, 255, 0.08) !important;
+    box-shadow: var(--vc-shadow) !important;
+}
+
+.welcome-banner,
+.welcome-section {
+    background:
+        linear-gradient(120deg, #1769e8 0%, #207dff 42%, #3b9bff 78%, #1fb6a6 100%) !important;
+    border: none !important;
+    box-shadow:
+        0 18px 40px rgba(32, 125, 255, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Primary buttons — public CTA style */
+.btn-primary,
+.dashboard-btn-primary,
+.action-btn-primary,
+button.btn-primary,
+a.btn-primary {
+    background: linear-gradient(135deg, #207dff 0%, #0d5fd4 100%) !important;
+    border: none !important;
+    border-radius: 999px !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 4px 14px rgba(32, 125, 255, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+}
+
+.btn-primary:hover,
+.dashboard-btn-primary:hover,
+.action-btn-primary:hover,
+button.btn-primary:hover,
+a.btn-primary:hover {
+    background: linear-gradient(135deg, #3b8dff 0%, #207dff 100%) !important;
+    color: #ffffff !important;
+    box-shadow:
+        0 8px 22px rgba(32, 125, 255, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Logout links keep readable danger feel but softer */
+.logout-link,
+.admin-logout,
+.dashboard-nav-link.logout-link {
+    color: #e35d6a !important;
+}
+
+.logout-link:hover,
+.admin-logout:hover,
+.dashboard-nav-link.logout-link:hover {
+    background: rgba(227, 93, 106, 0.08) !important;
+    color: #d64555 !important;
+}
+
+
+/* ==========================================================================
+   SENIOR UI/UX DASHBOARD SPEC - 3D STAT CARDS, TABLES & BADGES
+   ========================================================================== */
+
+/* Enhanced 3D Stat Cards */
+.dashboard-stat-card,
+.stat-card {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 24px !important;
+    border: 1px solid rgba(226, 232, 240, 0.85) !important;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06), 0 0 0 1px rgba(37, 99, 235, 0.03) !important;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.dashboard-stat-card:hover,
+.stat-card:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    box-shadow: 0 20px 45px -8px rgba(37, 99, 235, 0.22) !important;
+    border-color: rgba(37, 99, 235, 0.35) !important;
+}
+
+/* Stat Icons in Colored Squircles */
+.stat-icon,
+.stat-card-icon {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 24px !important;
+    flex-shrink: 0;
+    transition: transform 0.35s ease;
+}
+
+.dashboard-stat-card:hover .stat-icon,
+.stat-card:hover .stat-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* Blue Tone Icons */
+.stat-icon.children-icon,
+.stat-icon.blue,
+.stat-icon.total-children {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(59, 130, 246, 0.2)) !important;
+    color: #2563eb !important;
+    border: 1px solid rgba(37, 99, 235, 0.25) !important;
+}
+
+/* Green Tone Icons */
+.stat-icon.history-icon,
+.stat-icon.green,
+.stat-icon.completed {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(52, 211, 153, 0.2)) !important;
+    color: #10b981 !important;
+    border: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+/* Amber Tone Icons */
+.stat-icon.schedule-icon,
+.stat-icon.orange,
+.stat-icon.upcoming {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(251, 191, 36, 0.2)) !important;
+    color: #f59e0b !important;
+    border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
+/* Purple Tone Icons */
+.stat-icon.request-icon,
+.stat-icon.purple,
+.stat-icon.pending {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(168, 85, 247, 0.2)) !important;
+    color: #8b5cf6 !important;
+    border: 1px solid rgba(139, 92, 246, 0.25) !important;
+}
+
+/* Stat Numbers */
+.stat-content strong,
+.stat-info strong,
+.stat-value {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.stat-content span,
+.stat-info span,
+.stat-title {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #64748b !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Quick Action Cards */
+.quick-action-card,
+.action-card {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    padding: 22px !important;
+    border: 1px solid rgba(226, 232, 240, 0.85) !important;
+    box-shadow: 0 8px 24px -4px rgba(15, 23, 42, 0.05) !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    text-decoration: none !important;
+}
+
+.quick-action-card:hover,
+.action-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 16px 36px -6px rgba(37, 99, 235, 0.18) !important;
+    border-color: rgba(37, 99, 235, 0.35) !important;
+}
+
+/* Modern Form Controls */
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select.form-control {
+    border-radius: 12px !important;
+    border: 1.5px solid #e2e8f0 !important;
+    padding: 10px 16px !important;
+    font-size: 14.5px !important;
+    color: #1e293b !important;
+    transition: all 0.25s ease !important;
+}
+
+.form-control:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select.form-control:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14) !important;
+    outline: none !important;
+}
+
+
+/* =========================================================
+   HEADER PROFILE FLOATING DROPDOWN MENU
+========================================================= */
+
+.header-profile-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.header-profile-btn {
+    border-radius: 999px !important;
+    border: 1px solid rgba(32, 125, 255, 0.16) !important;
+    background: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(32, 125, 255, 0.08) !important;
+    padding: 6px 14px 6px 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+    text-decoration: none;
+}
+
+.header-profile-btn:hover {
+    border-color: #207dff !important;
+    box-shadow: 0 6px 20px rgba(32, 125, 255, 0.15) !important;
+    transform: translateY(-1px);
+}
+
+.header-profile-btn .header-profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #eaf3ff;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(32, 125, 255, 0.2);
+    flex-shrink: 0;
+}
+
+.header-profile-btn .header-profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-profile-btn .header-profile-info {
+    text-align: left;
+    line-height: 1.25;
+}
+
+.header-profile-btn .header-welcome {
+    display: block;
+    font-size: 11px;
+    color: #8293a4;
+    font-weight: 500;
+}
+
+.header-profile-btn strong {
+    display: block;
+    font-size: 13.5px;
+    color: #17324d;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.header-profile-btn .profile-arrow {
+    font-size: 12px;
+    color: #8293a4;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+    margin-left: 2px;
+}
+
+.header-profile-btn:hover .profile-arrow {
+    color: #207dff;
+}
+
+.header-profile-wrapper.open .header-profile-btn {
+    border-color: #207dff !important;
+    box-shadow: 0 0 0 3px rgba(32, 125, 255, 0.15), 0 6px 20px rgba(32, 125, 255, 0.15) !important;
+}
+
+.header-profile-wrapper.open .profile-arrow {
+    transform: rotate(180deg);
+    color: #207dff !important;
+}
+
+.profile-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 270px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 10px;
+    box-shadow: 0 20px 45px -8px rgba(15, 23, 42, 0.18), 0 4px 18px rgba(15, 23, 42, 0.06);
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.96);
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+}
+
+.header-profile-wrapper.open .profile-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.dropdown-user-card {
+    padding: 12px 14px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.dropdown-user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    flex-shrink: 0;
+}
+
+.dropdown-user-meta strong {
+    display: block;
+    font-size: 13.5px;
+    color: #0f172a;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.dropdown-user-meta small {
+    display: block;
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 2px;
+    max-width: 155px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdown-user-meta .role-pill {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e40af;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+
+.profile-dropdown-divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 6px 0;
+}
+
+.dropdown-link-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: #334155 !important;
+    text-decoration: none !important;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.15s ease;
+}
+
+.dropdown-link-item i {
+    font-size: 15px;
+    color: #64748b;
+    transition: all 0.15s ease;
+}
+
+.dropdown-link-item:hover {
+    background: #f1f5f9;
+    color: #0284c7 !important;
+}
+
+.dropdown-link-item:hover i {
+    color: #0284c7;
+    transform: scale(1.1);
+}
+
+.dropdown-link-item.logout-item {
+    color: #dc2626 !important;
+}
+
+.dropdown-link-item.logout-item i {
+    color: #dc2626;
+}
+
+.dropdown-link-item.logout-item:hover {
+    background: #fef2f2;
+    color: #b91c1c !important;
+}

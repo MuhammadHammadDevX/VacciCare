@@ -1,0 +1,1357 @@
+/* ==========================================================================
+   VacciCare - Senior UI/UX Designer 3D Animation & Design System (2026)
+   Crafted with ultra-modern glassmorphism, 3D transforms, fluid typography,
+   interactive mouse spotlights, and mobile-first responsiveness.
+   ========================================================================== */
+
+:root {
+    --vc-brand-primary: #2563eb;
+    --vc-brand-primary-dark: #1d4ed8;
+    --vc-brand-cyan: #06b6d4;
+    --vc-brand-cyan-light: #38bdf8;
+    --vc-brand-emerald: #10b981;
+    --vc-brand-purple: #8b5cf6;
+    --vc-dark-obsidian: #0f172a;
+    --vc-dark-slate: #1e293b;
+    --vc-text-muted: #64748b;
+
+    --vc-glass-navbar: rgba(255, 255, 255, 0.94);
+    --vc-glass-navbar-border: rgba(226, 232, 240, 0.85);
+    --vc-glass-dark-nav: rgba(13, 23, 42, 0.97);
+
+    --vc-3d-perspective: 1200px;
+    --vc-card-shadow-3d: 
+        0 10px 30px -10px rgba(15, 35, 75, 0.12),
+        0 20px 40px -15px rgba(37, 99, 235, 0.14),
+        0 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+    --vc-card-hover-shadow-3d:
+        0 22px 50px -10px rgba(15, 35, 75, 0.22),
+        0 30px 60px -15px rgba(37, 99, 235, 0.35),
+        0 0 1px 1px rgba(255, 255, 255, 0.95) inset;
+}
+
+/* ==========================================================================
+   1. GLOBAL RESPONSIVE SAFETY & FIXES
+   ========================================================================== */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8fafc;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Fluid responsive container safeguards */
+.container, .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+@media (min-width: 576px) { .container { max-width: 540px !important; } }
+@media (min-width: 768px) { .container { max-width: 720px !important; } }
+@media (min-width: 992px) { .container { max-width: 960px !important; } }
+@media (min-width: 1200px) { .container { max-width: 1140px !important; } }
+@media (min-width: 1400px) { .container { max-width: 1320px !important; } }
+
+/* ==========================================================================
+   2. DESKTOP & MOBILE BRAND LOGO (FIXES INVISIBLE WHITE TEXT ISSUE)
+   ========================================================================== */
+
+/* Navbar Brand - Always Flex Center */
+.navbar-brand {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px;
+    margin-right: 0 !important;
+    padding: 6px 0 !important;
+    text-decoration: none !important;
+    z-index: 10;
+}
+
+/* Modern 3D Squircle Logo Icon Badge */
+.brand-icon-badge {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 4px 14px rgba(37, 99, 235, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.navbar-brand:hover .brand-icon-badge {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+.brand-icon-badge i {
+    font-size: 20px;
+    color: #ffffff !important;
+}
+
+.brand-text-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.15;
+}
+
+/* DESKTOP BRAND TEXT COLOR: Ultra-Crisp Midnight Navy + Electric Blue */
+.brand-name {
+    font-size: 22px !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em;
+    display: inline-flex !important;
+    align-items: center;
+    line-height: 1.1;
+}
+
+.brand-name .brand-name-dark {
+    color: #0f172a !important; /* Deep Midnight Obsidian */
+}
+
+.brand-name .brand-name-accent {
+    color: #2563eb !important; /* Electric Blue Accent */
+}
+
+.brand-tagline {
+    font-size: 9.5px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b !important; /* Slate Gray */
+    margin-top: 1px !important;
+}
+
+/* ==========================================================================
+   3. DESKTOP FLOATING GLASS NAVBAR (10-YEAR SENIOR DESIGNER SPEC)
+   ========================================================================== */
+
+.ftco-navbar-light {
+    position: sticky !important;
+    top: 14px !important;
+    left: auto !important;
+    right: auto !important;
+    width: calc(100% - 32px) !important;
+    max-width: 1280px !important;
+    margin: 8px auto 14px !important;
+    padding: 8px 18px !important;
+    border-radius: 20px !important;
+    background: var(--vc-glass-navbar) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+    box-shadow: 
+        0 10px 30px -5px rgba(15, 23, 42, 0.08),
+        0 0 0 1px rgba(37, 99, 235, 0.06),
+        0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid var(--vc-glass-navbar-border) !important;
+    z-index: 10045;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ftco-navbar-light .container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+/* Desktop Nav Items */
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    font-size: 14.5px !important;
+    font-weight: 500 !important;
+    color: #334155 !important;
+    padding: 8px 14px !important;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item:not(.cta) > .nav-link:hover {
+    color: #2563eb !important;
+    background: rgba(37, 99, 235, 0.08) !important;
+    transform: translateY(-1px);
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link,
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
+    color: #2563eb !important;
+    font-weight: 600 !important;
+}
+
+/* Desktop CTA "Book Vaccination" Button */
+.ftco-navbar-light .nav-item.cta > .nav-link {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 13.5px !important;
+    padding: 9px 20px !important;
+    border-radius: 999px !important;
+    box-shadow: 
+        0 4px 14px rgba(37, 99, 235, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+    border: none !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ftco-navbar-light .nav-item.cta > .nav-link:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+        0 8px 24px rgba(37, 99, 235, 0.48),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   4. ULTRA-MODERN MOBILE NAVBAR & HAMBURGER (SCREENS < 992PX)
+   ========================================================================== */
+
+.vc-hamburger-btn {
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px !important;
+    width: 44px;
+    height: 44px;
+    padding: 0 !important;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none !important;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+.vc-hamburger-btn:hover {
+    background: rgba(37, 99, 235, 0.3) !important;
+    transform: scale(1.05);
+}
+
+.vc-hamburger-box {
+    width: 22px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.vc-hamburger-line {
+    width: 100%;
+    height: 2.5px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    transition: all 0.35s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+/* Hamburger morph to X */
+.vc-hamburger-btn[aria-expanded="true"] .vc-hamburger-line:nth-child(1),
+.vc-hamburger-btn.active .vc-hamburger-line:nth-child(1) {
+    transform: translateY(6.75px) rotate(45deg);
+    background-color: #38bdf8;
+}
+
+.vc-hamburger-btn[aria-expanded="true"] .vc-hamburger-line:nth-child(2),
+.vc-hamburger-btn.active .vc-hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.vc-hamburger-btn[aria-expanded="true"] .vc-hamburger-line:nth-child(3),
+.vc-hamburger-btn.active .vc-hamburger-line:nth-child(3) {
+    transform: translateY(-6.75px) rotate(-45deg);
+    background-color: #38bdf8;
+}
+
+@media (max-width: 991.98px) {
+    .vc-hamburger-btn {
+        display: flex !important;
+    }
+
+    .ftco-navbar-light {
+        background: var(--vc-glass-dark-nav) !important;
+        backdrop-filter: blur(20px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.14) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+        margin: 8px auto 12px !important;
+        border-radius: 16px !important;
+        padding: 8px 14px !important;
+        width: calc(100% - 20px) !important;
+    }
+
+    /* Mobile Brand Text: Crisp White + Sky Cyan on dark mobile navbar */
+    .ftco-navbar-light .brand-name .brand-name-dark {
+        color: #ffffff !important;
+    }
+    .ftco-navbar-light .brand-name .brand-name-accent {
+        color: #38bdf8 !important;
+    }
+    .ftco-navbar-light .brand-tagline {
+        color: rgba(255, 255, 255, 0.72) !important;
+    }
+
+    /* Mobile Menu Drawer */
+    .ftco-navbar-light .navbar-collapse {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        background: rgba(13, 23, 42, 0.98) !important;
+        backdrop-filter: blur(24px) saturate(190%) !important;
+        -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.14) !important;
+        border-radius: 18px !important;
+        padding: 20px 18px !important;
+        box-shadow: 
+            0 20px 50px rgba(0, 0, 0, 0.5),
+            0 0 0 1px rgba(37, 99, 235, 0.25) inset !important;
+        animation: vcSlideDownFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+        padding: 10px 14px !important;
+        border-radius: 10px !important;
+        color: rgba(255, 255, 255, 0.88) !important;
+        font-size: 15px !important;
+    }
+
+    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover,
+    .ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link {
+        background: rgba(37, 99, 235, 0.2) !important;
+        color: #ffffff !important;
+        transform: translateX(4px);
+    }
+
+    .top { display: none !important; }
+}
+
+@keyframes vcSlideDownFade {
+    from { opacity: 0; transform: translateY(-12px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ==========================================================================
+   5. SENIOR UI/UX HERO SECTION (3D DEPTH, FLUID TYPOGRAPHY & BALANCED CENTERING)
+   ========================================================================== */
+
+section.hero-wrap.vc-video-hero,
+.hero-wrap.vc-video-hero,
+.vc-video-hero {
+    overflow: hidden !important;
+    position: relative !important;
+    border-radius: 24px !important;
+    margin: 0 16px !important;
+    min-height: 720px !important;
+    height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+    box-sizing: border-box !important;
+}
+
+section.hero-wrap.vc-video-hero .container,
+.hero-wrap.vc-video-hero .container,
+.vc-video-hero .container {
+    position: relative !important;
+    z-index: 3 !important;
+    width: 100% !important;
+}
+
+section.hero-wrap.vc-video-hero .slider-text,
+.hero-wrap.vc-video-hero .slider-text,
+.vc-video-hero .slider-text {
+    width: 100% !important;
+    height: auto !important;
+    min-height: unset !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+section.hero-wrap.vc-video-hero .vc-hero-copy,
+.hero-wrap.vc-video-hero .vc-hero-copy,
+.vc-video-hero .vc-hero-copy {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 680px !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+/* Modern Pill Badge */
+.hero-pill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.35rem !important;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+    animation: vcBadgePulse 2s infinite;
+}
+
+@keyframes vcBadgePulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.badge-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+}
+
+.badge-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: rgba(56, 189, 248, 0.25);
+    color: #38bdf8;
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+/* Hero Headline & High-Contrast Gradient Text */
+.hero-headline {
+    font-size: clamp(2.2rem, 4.4vw, 3.6rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.025em;
+    color: #ffffff !important;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    margin-top: 0 !important;
+    margin-bottom: 1.25rem !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+}
+
+.hero-gradient-text {
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    filter: drop-shadow(0 2px 8px rgba(56, 189, 248, 0.35));
+}
+
+.hero-lead {
+    font-size: clamp(15px, 1.15vw, 17px) !important;
+    line-height: 1.7 !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+    max-width: 580px !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.75rem !important;
+    font-weight: 400;
+}
+
+.hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+    align-items: center !important;
+    margin-bottom: 2rem !important;
+}
+
+.hero-btn-main {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.01em;
+    box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.5) !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.hero-btn-main:hover {
+    transform: translateY(-3px) scale(1.02) !important;
+    box-shadow: 0 14px 32px -4px rgba(37, 99, 235, 0.7) !important;
+}
+
+.hero-btn-glass {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.hero-btn-glass:hover {
+    background: rgba(255, 255, 255, 0.22) !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.45) !important;
+    transform: translateY(-3px) scale(1.02) !important;
+}
+
+/* Floating 3D Metrics Cards in Hero */
+.hero-3d-metrics-row {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.hero-metric-card {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 10px 18px !important;
+    border-radius: 14px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.hero-stat-badge {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ffffff !important;
+    letter-spacing: -0.02em;
+}
+
+.hero-metric-card:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    transform: translateY(-5px) scale(1.03) !important;
+    border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
+.metric-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(37, 99, 235, 0.35);
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.metric-content {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.metric-content strong {
+    font-size: 17px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.metric-content span {
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 500;
+}
+
+@media (max-width: 991.98px) {
+    section.hero-wrap.vc-video-hero,
+    .hero-wrap.vc-video-hero,
+    .vc-video-hero {
+        min-height: 640px !important;
+        padding-top: 55px !important;
+        padding-bottom: 55px !important;
+    }
+    .hero-headline {
+        font-size: clamp(2rem, 5vw, 2.75rem) !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    section.hero-wrap.vc-video-hero,
+    .hero-wrap.vc-video-hero,
+    .vc-video-hero {
+        min-height: auto !important;
+        padding-top: 40px !important;
+        padding-bottom: 45px !important;
+        margin: 0 8px !important;
+        border-radius: 18px !important;
+    }
+    .hero-headline {
+        font-size: clamp(1.65rem, 7vw, 2.15rem) !important;
+        line-height: 1.18 !important;
+    }
+    .hero-lead {
+        font-size: 14px !important;
+        margin-bottom: 1.25rem !important;
+    }
+    .hero-actions {
+        margin-bottom: 1.5rem !important;
+    }
+    .hero-actions .btn {
+        width: 100% !important;
+        text-align: center;
+    }
+    .hero-3d-metrics-row {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    .hero-metric-card {
+        width: 100% !important;
+    }
+}
+
+/* ==========================================================================
+   6. 3D CARD TRANSFORMS & DEPTH INTERACTION (ALL SECTIONS & PANELS)
+   ========================================================================== */
+
+.vc-3d-card,
+.stat-card,
+.dashboard-stat-card,
+.hospital-card,
+.department-wrap,
+.how-it-works-card,
+.staff,
+.pricing-entry,
+.testimony-wrap,
+.card {
+    transition: 
+        transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        border-color 0.4s ease,
+        background 0.4s ease !important;
+    transform-style: preserve-3d;
+    perspective: var(--vc-3d-perspective);
+    will-change: transform, box-shadow;
+    position: relative;
+    border-radius: 20px !important;
+    border: 1px solid rgba(226, 232, 240, 0.8) !important;
+    box-shadow: var(--vc-card-shadow-3d) !important;
+    background: #ffffff;
+}
+
+/* 3D Hover Elevation */
+.vc-3d-card:hover,
+.stat-card:hover,
+.dashboard-stat-card:hover,
+.hospital-card:hover,
+.department-wrap:hover,
+.how-it-works-card:hover,
+.staff:hover {
+    transform: translateY(-8px) scale(1.02) rotateX(2deg) rotateY(-1.5deg) !important;
+    box-shadow: var(--vc-card-hover-shadow-3d) !important;
+    border-color: rgba(37, 99, 235, 0.35) !important;
+}
+
+/* Floating Layer inside 3D Card */
+.vc-3d-card:hover .icon,
+.stat-card:hover .stat-icon,
+.dashboard-stat-card:hover .stat-card-icon,
+.department-wrap:hover .icon {
+    transform: translateZ(28px) scale(1.1) !important;
+    filter: drop-shadow(0 8px 16px rgba(37, 99, 235, 0.45));
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Specular Light Reflection Sweep on Card Hover */
+.vc-3d-card::before,
+.department-wrap::before,
+.how-it-works-card::before,
+.hospital-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 60%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+
+.vc-3d-card:hover::before,
+.department-wrap:hover::before,
+.how-it-works-card:hover::before,
+.hospital-card:hover::before {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   7. 3D FLOATING & LEVITATION ANIMATIONS
+   ========================================================================== */
+
+@keyframes vcFloat3D {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-7px) rotate(1deg); }
+}
+
+@keyframes vcFloat3DAlt {
+    0%, 100% { transform: translateY(-2px) rotate(0deg); }
+    50% { transform: translateY(-9px) rotate(-1deg); }
+}
+
+.vc-floating {
+    animation: vcFloat3D 4.5s ease-in-out infinite;
+}
+
+.vc-floating-alt {
+    animation: vcFloat3DAlt 5.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   8. BUTTON MICRO-INTERACTIONS & SHIMMER EFFECTS
+   ========================================================================== */
+
+.btn-primary,
+.hero-btn-main,
+.nav-item.cta > .nav-link,
+.action-btn-primary,
+.dashboard-btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-primary::after,
+.hero-btn-main::after,
+.nav-item.cta > .nav-link::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(25deg);
+    pointer-events: none;
+    animation: vcShimmerLoop 4.5s infinite;
+}
+
+@keyframes vcShimmerLoop {
+    0% { left: -100%; }
+    20%, 100% { left: 160%; }
+}
+
+.btn:active {
+    transform: translateY(2px) scale(0.97) !important;
+}
+
+/* ==========================================================================
+   9. DASHBOARD PANELS RESPONSIVENESS & SIDEBAR POLISH
+   ========================================================================== */
+
+.dashboard-wrapper,
+.admin-wrapper,
+.hospital-layout {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+}
+
+@media (max-width: 991.98px) {
+    .dashboard-sidebar,
+    .admin-sidebar,
+    .hospital-sidebar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 285px !important;
+        z-index: 1050 !important;
+        transform: translateX(-105%) !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 0.35) !important;
+    }
+
+    .dashboard-sidebar.open,
+    .admin-sidebar.open,
+    .hospital-sidebar.open {
+        transform: translateX(0) !important;
+    }
+
+    .dashboard-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(10, 20, 36, 0.65);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 1040;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .dashboard-overlay.active {
+        display: block !important;
+        opacity: 1 !important;
+    }
+
+    .dashboard-content,
+    .admin-content,
+    .hospital-content,
+    main {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 14px !important;
+    }
+
+    .stats-grid,
+    .admin-stats-grid,
+    .dashboard-stats-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .stats-grid,
+    .admin-stats-grid,
+    .dashboard-stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Responsive Table Wrapper */
+.table-responsive {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    -webkit-overflow-scrolling: touch;
+}
+
+.table th {
+    white-space: nowrap;
+    background: #f8fafc;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* ==========================================================================
+   10. INTERSECTION OBSERVER SCROLL REVEAL 3D ANIMATIONS
+   ========================================================================== */
+
+.vc-reveal-3d {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(15deg) translateY(35px) scale(0.96);
+    transition: 
+        opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.vc-reveal-3d.vc-in-view {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
+}
+
+.vc-delay-1 { transition-delay: 0.1s !important; }
+.vc-delay-2 { transition-delay: 0.2s !important; }
+.vc-delay-3 { transition-delay: 0.3s !important; }
+.vc-delay-4 { transition-delay: 0.4s !important; }
+
+/* Reduced motion preference respect */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .vc-reveal-3d {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+
+/* ==========================================================================
+   11. SERVICES & DEPARTMENT SECTION (FIXED: COMPACT 3x3 GRID - ALL 9 CARDS VISIBLE)
+   ========================================================================== */
+
+#vaccines-section {
+    padding: 35px 0 !important;
+    background: #f8fafc !important;
+}
+
+#vaccines-section .container-fluid {
+    max-width: 1320px !important;
+    margin: 0 auto;
+    padding: 0 16px !important;
+}
+
+#vaccines-section .img-dept {
+    border-radius: 20px !important;
+    box-shadow: 0 12px 30px -6px rgba(15, 23, 42, 0.14) !important;
+    width: 100% !important;
+    min-height: 520px !important;
+    height: 100% !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    display: block !important;
+}
+
+/* Compact, Separated Cards - All 9 Cards Visible Together in 3 Rows */
+.department-wrap {
+    width: auto !important;
+    height: auto !important; /* CRITICAL: Never 100% */
+    min-height: 155px !important;
+    margin: 6px 5px !important; /* Clean 5-6px separation gap */
+    padding: 18px 14px !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(226, 232, 240, 0.9) !important;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04) !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.department-wrap:hover {
+    transform: translateY(-4px) scale(1.02) !important;
+    box-shadow: 0 12px 28px -4px rgba(37, 99, 235, 0.18) !important;
+    border-color: rgba(37, 99, 235, 0.35) !important;
+    background: #ffffff !important;
+}
+
+/* Compact Glowing Icon Badge */
+.department-wrap .icon {
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 12px !important;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(6, 182, 212, 0.12) 100%) !important;
+    border: 1px solid rgba(37, 99, 235, 0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 10px !important;
+    transition: all 0.3s ease;
+}
+
+.department-wrap:hover .icon {
+    transform: scale(1.1) rotate(-6deg);
+    background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%) !important;
+    border-color: transparent !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.department-wrap .icon span {
+    color: #2563eb !important;
+    font-size: 20px !important;
+    transition: color 0.3s ease;
+}
+
+.department-wrap:hover .icon span {
+    color: #ffffff !important;
+}
+
+.department-wrap .text {
+    padding: 0 !important;
+}
+
+.department-wrap .text h3 {
+    margin-bottom: 6px !important;
+}
+
+.department-wrap .text h3 a {
+    font-size: 15.5px !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    text-decoration: none !important;
+    letter-spacing: -0.01em;
+    transition: color 0.25s ease;
+}
+
+.department-wrap:hover .text h3 a {
+    color: #2563eb !important;
+}
+
+.department-wrap .text p {
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    color: #64748b !important;
+    margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   12. ULTRA-PREMIUM MIDNIGHT DARK FOOTER (FIXES LIGHT FOOTER - IMAGE 2)
+   ========================================================================== */
+
+.ftco-footer {
+    position: relative !important;
+    background: #080d1a !important;
+    padding: 85px 0 25px !important;
+    border-top: 1px solid rgba(56, 189, 248, 0.22) !important;
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.5) !important;
+    overflow: hidden;
+}
+
+.ftco-footer .overlay {
+    background: 
+        radial-gradient(circle at 12% 20%, rgba(37, 99, 235, 0.28) 0%, transparent 55%),
+        radial-gradient(circle at 88% 80%, rgba(6, 182, 212, 0.22) 0%, transparent 50%),
+        linear-gradient(180deg, rgba(8, 13, 26, 0.98) 0%, rgba(4, 7, 15, 0.99) 100%) !important;
+    opacity: 1 !important;
+}
+
+.ftco-footer .container-fluid {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px !important;
+    margin: 0 auto;
+}
+
+/* Footer Heading */
+.ftco-footer .ftco-heading-2 {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px !important;
+    position: relative;
+    display: inline-block;
+}
+
+.ftco-footer .ftco-heading-2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 28px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #38bdf8, #2563eb);
+}
+
+/* Footer Paragraph */
+.ftco-footer p {
+    color: #94a3b8 !important;
+    font-size: 14px !important;
+    line-height: 1.7 !important;
+}
+
+/* Footer Links */
+.ftco-footer ul.list-unstyled li a {
+    color: #94a3b8 !important;
+    font-size: 14px !important;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.ftco-footer ul.list-unstyled li a span.icon-long-arrow-right {
+    color: #38bdf8 !important;
+    transition: transform 0.25s ease;
+}
+
+.ftco-footer ul.list-unstyled li a:hover {
+    color: #ffffff !important;
+    transform: translateX(6px);
+}
+
+.ftco-footer ul.list-unstyled li a:hover span.icon-long-arrow-right {
+    transform: translateX(3px);
+}
+
+/* Footer Social Icons */
+.ftco-footer-social li {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.ftco-footer-social li a {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.ftco-footer-social li a:hover {
+    background: #2563eb !important;
+    border-color: #2563eb !important;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5) !important;
+}
+
+/* Contact Info in Footer */
+.block-23 ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.block-23 ul li .icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    color: #38bdf8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 14px;
+    flex-shrink: 0;
+    font-size: 16px;
+}
+
+.block-23 ul li a {
+    color: #cbd5e1 !important;
+    transition: color 0.2s ease;
+}
+
+.block-23 ul li a:hover {
+    color: #38bdf8 !important;
+}
+
+/* Bottom copyright bar */
+.ftco-footer .row:last-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 25px;
+    margin-top: 30px;
+}
+
+.ftco-footer .row:last-child p {
+    color: #64748b !important;
+    font-size: 13.5px !important;
+}
+
+.ftco-footer .row:last-child strong {
+    color: #38bdf8 !important;
+}
+
+/* ==========================================================================
+   13. DASHBOARD PANELS HIGH-LEVEL UI (PARENT, HOSPITAL, ADMIN)
+   ========================================================================== */
+
+/* Welcome Banners in All Dashboards */
+.welcome-banner,
+.welcome-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 45%, #0284c7 80%, #0d9488 100%) !important;
+    border-radius: 24px !important;
+    padding: 32px 36px !important;
+    color: #ffffff !important;
+    box-shadow: 
+        0 18px 45px rgba(37, 99, 235, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+    border: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.welcome-banner::after,
+.welcome-section::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.welcome-banner h1,
+.welcome-section h1,
+.welcome-banner h2,
+.welcome-section h2 {
+    color: #ffffff !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+}
+
+.welcome-banner p,
+.welcome-section p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 15px !important;
+}
+
+/* Stat Cards in Panels: 3D Hover + Colored Glow Badges */
+.stat-card,
+.dashboard-stat-card {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 24px !important;
+    border: 1px solid rgba(226, 232, 240, 0.85) !important;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.06) !important;
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.stat-card:hover,
+.dashboard-stat-card:hover {
+    transform: translateY(-6px) scale(1.02) !important;
+    box-shadow: 0 20px 45px -8px rgba(37, 99, 235, 0.22) !important;
+    border-color: rgba(37, 99, 235, 0.35) !important;
+}
+
+.stat-icon,
+.stat-card-icon {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 24px !important;
+    flex-shrink: 0;
+    transition: transform 0.35s ease;
+}
+
+.stat-number,
+.stat-card-number,
+.stat-value {
+    font-size: 32px !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-top: 6px;
+}
+
+.stat-label,
+.stat-card-label {
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    color: #64748b !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* High-Level Modern Table Containers Across Panels */
+.data-table-card,
+.dashboard-table-card,
+.content-card,
+.admin-card {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(226, 232, 240, 0.85) !important;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05) !important;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.table {
+    margin-bottom: 0 !important;
+}
+
+.table thead th {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    font-weight: 600 !important;
+    font-size: 12.5px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 16px 20px !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    border-top: none !important;
+}
+
+.table tbody td {
+    padding: 16px 20px !important;
+    font-size: 14px !important;
+    color: #1e293b !important;
+    vertical-align: middle !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.table tbody tr:hover {
+    background: rgba(37, 99, 235, 0.03) !important;
+}
+
+/* Status Badges */
+.badge-status,
+.status-badge {
+    padding: 6px 14px !important;
+    border-radius: 999px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.02em;
+}
+
+.status-badge.completed,
+.badge-status.completed,
+.status-badge.vaccinated {
+    background: rgba(16, 185, 129, 0.12) !important;
+    color: #059669 !important;
+    border: 1px solid rgba(16, 185, 129, 0.28) !important;
+}
+
+.status-badge.pending,
+.badge-status.pending,
+.status-badge.scheduled {
+    background: rgba(245, 158, 11, 0.12) !important;
+    color: #d97706 !important;
+    border: 1px solid rgba(245, 158, 11, 0.28) !important;
+}
+
+.status-badge.cancelled,
+.badge-status.cancelled,
+.status-badge.rejected {
+    background: rgba(239, 68, 68, 0.12) !important;
+    color: #dc2626 !important;
+    border: 1px solid rgba(239, 68, 68, 0.28) !important;
+}

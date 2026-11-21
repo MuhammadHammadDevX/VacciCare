@@ -1,0 +1,1189 @@
+/* =====================================================
+   VACCI CARE - ADD VACCINE
+   Hospital Dashboard
+===================================================== */
+
+:root {
+
+    --v-primary: #207dff;
+    --v-primary-dark: #1060cc;
+    --v-primary-light: #eaf3ff;
+
+    --v-text: #294b68;
+    --v-muted: #7890a5;
+
+    --v-white: #ffffff;
+    --v-background: #f5f9fc;
+
+    --v-border: #e7eef4;
+
+    --v-green: #27ae72;
+    --v-green-bg: #eafaf3;
+
+    --v-red: #d9534f;
+    --v-red-bg: #fff4f4;
+
+    --v-shadow: 0 8px 25px rgba(32, 125, 255, 0.07);
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.add-vaccine-page {
+
+    padding: 32px;
+
+    min-height: calc(100vh - 78px);
+
+    background: var(--v-background);
+}
+
+
+.add-vaccine-container {
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+
+.vaccine-page-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #ffffff;
+
+    border: 1px solid var(--v-border);
+
+    border-radius: 18px;
+
+    padding: 28px 32px;
+
+    margin-bottom: 22px;
+
+    box-shadow: var(--v-shadow);
+}
+
+
+.heading-eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    background: var(--v-primary-light);
+
+    border: 1px solid #d8eaff;
+
+    color: var(--v-primary);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+
+.heading-content h1 {
+
+    margin-top: 10px;
+
+    margin-bottom: 5px;
+
+    color: #163f67;
+
+    font-size: 28px;
+
+    font-weight: 700;
+}
+
+
+.heading-content p {
+
+    color: var(--v-muted);
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+
+.heading-icon {
+
+    width: 66px;
+
+    height: 66px;
+
+    border-radius: 17px;
+
+    background: var(--v-primary-light);
+
+    border: 1px solid #d7eaff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--v-primary);
+
+    font-size: 28px;
+}
+
+
+/* =====================================================
+   ALERT
+===================================================== */
+
+.vaccine-alert {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 16px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.vaccine-alert.success {
+
+    color: #207c54;
+
+    background: var(--v-green-bg);
+
+    border: 1px solid #ccefe0;
+}
+
+
+.vaccine-alert.error {
+
+    color: #b54440;
+
+    background: var(--v-red-bg);
+
+    border: 1px solid #f4d0d0;
+}
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.vaccine-form-card {
+
+    background: var(--v-white);
+
+    border: 1px solid var(--v-border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--v-shadow);
+
+    margin-bottom: 24px;
+}
+
+
+/* =====================================================
+   FORM HEADER
+===================================================== */
+
+.form-card-header {
+
+    padding: 22px 26px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--v-border);
+}
+
+
+.form-card-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.form-card-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--v-primary-light);
+
+    color: var(--v-primary);
+
+    font-size: 20px;
+}
+
+
+.form-card-title h2 {
+
+    font-size: 18px;
+
+    color: #163f67;
+
+    margin: 0 0 3px;
+
+    font-weight: 700;
+}
+
+
+.form-card-title p {
+
+    margin: 0;
+
+    color: var(--v-muted);
+
+    font-size: 12px;
+}
+
+
+.secure-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 10px;
+
+    background: var(--v-green-bg);
+
+    color: var(--v-green);
+
+    border-radius: 8px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.vaccine-form-card form {
+
+    padding: 26px;
+}
+
+
+.vaccine-fields {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+.vaccine-field {
+
+    min-width: 0;
+}
+
+
+.vaccine-field.full-width {
+
+    grid-column: 1 / -1;
+}
+
+
+.vaccine-field label {
+
+    display: block;
+
+    color: #355a76;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.vaccine-field label span {
+
+    color: #e05252;
+
+    margin-left: 2px;
+}
+
+
+.vaccine-field label small {
+
+    color: var(--v-muted);
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    margin-left: 4px;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.vaccine-input {
+
+    height: 51px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    border: 1px solid #dfe9f0;
+
+    border-radius: 10px;
+
+    padding: 0 14px;
+
+    background: #fbfdff;
+
+    transition: 0.2s ease;
+}
+
+
+.vaccine-input:focus-within {
+
+    border-color: var(--v-primary);
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(32, 125, 255, 0.08);
+}
+
+
+.vaccine-input i {
+
+    color: var(--v-primary);
+
+    font-size: 17px;
+
+    width: 20px;
+
+    text-align: center;
+}
+
+
+.vaccine-input input,
+.vaccine-input select {
+
+    width: 100%;
+
+    border: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #355a76;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+}
+
+
+.vaccine-input input::placeholder {
+
+    color: #9cafbd;
+}
+
+
+.vaccine-input select {
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.vaccine-textarea {
+
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    border: 1px solid #dfe9f0;
+
+    border-radius: 10px;
+
+    padding: 14px;
+
+    background: #fbfdff;
+
+    transition: 0.2s ease;
+}
+
+
+.vaccine-textarea:focus-within {
+
+    border-color: var(--v-primary);
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(32, 125, 255, 0.08);
+}
+
+
+.vaccine-textarea i {
+
+    color: var(--v-primary);
+
+    font-size: 17px;
+
+    margin-top: 2px;
+}
+
+
+.vaccine-textarea textarea {
+
+    width: 100%;
+
+    min-height: 90px;
+
+    resize: vertical;
+
+    border: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #355a76;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+}
+
+
+.vaccine-textarea textarea::placeholder {
+
+    color: #9cafbd;
+}
+
+
+/* =====================================================
+   FORM ACTIONS
+===================================================== */
+
+.vaccine-form-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid var(--v-border);
+}
+
+
+.vaccine-btn {
+
+    min-height: 45px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    border: 1px solid transparent;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.vaccine-btn-primary {
+
+    background: var(--v-primary);
+
+    color: #ffffff;
+
+    border-color: var(--v-primary);
+}
+
+
+.vaccine-btn-primary:hover {
+
+    background: var(--v-primary-dark);
+
+    border-color: var(--v-primary-dark);
+
+    transform: translateY(-1px);
+}
+
+
+.vaccine-btn-secondary {
+
+    background: #ffffff;
+
+    color: #617c92;
+
+    border-color: #dce7ef;
+}
+
+
+.vaccine-btn-secondary:hover {
+
+    background: #f5f9fc;
+
+    color: var(--v-primary);
+}
+
+
+/* =====================================================
+   VACCINE LIST CARD
+===================================================== */
+
+.vaccine-list-card {
+
+    background: #ffffff;
+
+    border: 1px solid var(--v-border);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--v-shadow);
+}
+
+
+/* =====================================================
+   LIST HEADER
+===================================================== */
+
+.list-card-header {
+
+    padding: 24px 26px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--v-border);
+}
+
+
+.list-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--v-primary);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+
+.list-card-header h2 {
+
+    margin: 5px 0 3px;
+
+    color: #163f67;
+
+    font-size: 19px;
+}
+
+
+.list-card-header p {
+
+    margin: 0;
+
+    color: var(--v-muted);
+
+    font-size: 12px;
+}
+
+
+.vaccine-count {
+
+    min-width: 80px;
+
+    padding: 10px 14px;
+
+    border-radius: 11px;
+
+    background: var(--v-primary-light);
+
+    text-align: center;
+}
+
+
+.vaccine-count strong {
+
+    display: block;
+
+    color: var(--v-primary-dark);
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+.vaccine-count span {
+
+    color: var(--v-primary);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-wrapper {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.vaccine-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+
+.vaccine-table thead {
+
+    background: #f7fbfe;
+}
+
+
+.vaccine-table th {
+
+    padding: 14px 18px;
+
+    text-align: left;
+
+    color: #67839a;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    border-bottom: 1px solid var(--v-border);
+}
+
+
+.vaccine-table td {
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #edf2f6;
+
+    color: #4d6a81;
+
+    font-size: 12px;
+
+    vertical-align: middle;
+}
+
+
+.vaccine-table tbody tr {
+
+    transition: 0.2s ease;
+}
+
+
+.vaccine-table tbody tr:hover {
+
+    background: #fbfdff;
+}
+
+
+.vaccine-table tbody tr:last-child td {
+
+    border-bottom: 0;
+}
+
+
+.row-number {
+
+    color: #8aa0b1;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   VACCINE NAME
+===================================================== */
+
+.vaccine-name-cell {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.table-vaccine-icon {
+
+    width: 35px;
+
+    height: 35px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--v-primary-light);
+
+    color: var(--v-primary);
+}
+
+
+.vaccine-name-cell strong {
+
+    color: #294b68;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.description-cell {
+
+    display: block;
+
+    max-width: 250px;
+
+    color: #7890a5;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   AVAILABILITY
+===================================================== */
+
+.availability-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 9px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.availability-badge.available {
+
+    color: #21815a;
+
+    background: #eafaf3;
+}
+
+
+.availability-badge.unavailable {
+
+    color: #c44d49;
+
+    background: #fff1f1;
+}
+
+
+.status-dot {
+
+    width: 6px;
+
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}
+
+
+/* =====================================================
+   DATE
+===================================================== */
+
+.date-cell {
+
+    color: #7890a5;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.action-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.action-buttons form {
+
+    margin: 0;
+}
+
+
+.action-btn {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 8px;
+
+    border: 1px solid #e1eaf0;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+    font-size: 14px;
+}
+
+
+.edit-btn {
+
+    color: var(--v-primary);
+
+    background: #f3f8ff;
+}
+
+
+.edit-btn:hover {
+
+    color: #ffffff;
+
+    background: var(--v-primary);
+
+    border-color: var(--v-primary);
+}
+
+
+.delete-btn {
+
+    color: #d9534f;
+
+    background: #fff5f5;
+}
+
+
+.delete-btn:hover {
+
+    color: #ffffff;
+
+    background: #d9534f;
+
+    border-color: #d9534f;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-vaccine-state {
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+
+.empty-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: var(--v-primary-light);
+
+    color: var(--v-primary);
+
+    font-size: 27px;
+}
+
+
+.empty-vaccine-state h3 {
+
+    margin-bottom: 5px;
+
+    color: #294b68;
+
+    font-size: 16px;
+}
+
+
+.empty-vaccine-state p {
+
+    color: var(--v-muted);
+
+    font-size: 12px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .add-vaccine-page {
+
+        padding: 20px 15px;
+    }
+
+
+    .vaccine-page-heading {
+
+        padding: 22px;
+
+    }
+
+
+    .heading-content h1 {
+
+        font-size: 23px;
+    }
+
+
+    .heading-icon {
+
+        width: 55px;
+
+        height: 55px;
+
+        font-size: 23px;
+    }
+
+
+    .vaccine-fields {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .vaccine-field.full-width {
+
+        grid-column: auto;
+    }
+
+
+    .form-card-header {
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .secure-label {
+
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .vaccine-page-heading {
+
+        padding: 18px;
+    }
+
+
+    .heading-icon {
+
+        display: none;
+    }
+
+
+    .vaccine-form-card form {
+
+        padding: 20px;
+    }
+
+
+    .list-card-header {
+
+        padding: 20px;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .vaccine-form-actions {
+
+        flex-direction: column-reverse;
+
+        align-items: stretch;
+    }
+
+
+    .vaccine-btn {
+
+        width: 100%;
+    }
+
+}
